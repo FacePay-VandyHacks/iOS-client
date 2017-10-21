@@ -19,7 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let navController = UINavigationController(rootViewController: FPWelcomeController(nibName: "FPWelcomeView", bundle: nil))
+        var VC: UIViewController?
+        
+        let defaults = UserDefaults.standard
+        
+        if let accountKey = defaults.object(forKey: "accountID") as? String{
+            FPConstantsManager.sharedInstance.accountSecret = accountKey
+            VC = FPDisambiguationController(nibName: "FPDisambiguationController", bundle: nil)
+        } else {
+            VC = FPDisambiguationController(nibName: "FPDisambiguationController", bundle: nil)
+        }
+        
+        
+        
+        let navController = UINavigationController(rootViewController: VC!)
         
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()

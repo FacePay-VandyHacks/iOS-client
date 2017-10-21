@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A1A69E1E0F0BEEF708A2B1 /* Pods_FacePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33ACCFCA3A8BBEF4D937DEB6 /* Pods_FacePay.framework */; };
+		6465E58501B2554394B1828C /* Pods_FacePayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74E0ECDDC977A2EF46C62E /* Pods_FacePayUITests.framework */; };
 		6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */; };
-		6D00E0CA1F9AEB4B002C8F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */; };
 		6D00E0CF1F9AEB4B002C8F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */; };
 		6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */; };
-		6D00E0DD1F9AEB4B002C8F7D /* FacePayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0DC1F9AEB4B002C8F7D /* FacePayTests.swift */; };
-		6D00E0E81F9AEB4B002C8F7D /* FacePayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0E71F9AEB4B002C8F7D /* FacePayUITests.swift */; };
-		6D00E0F61F9AEC68002C8F7D /* FPWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */; };
-		6D00E0FA1F9AED76002C8F7D /* FPWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */; };
+		6DBF43FD1F9AF64A00370EAF /* FPDisambiguationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF43FC1F9AF64A00370EAF /* FPDisambiguationView.xib */; };
+		6DBF44021F9AF6B900370EAF /* FPSignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44011F9AF6B900370EAF /* FPSignUpView.xib */; };
+		6DBF44041F9AF6C300370EAF /* FPSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44031F9AF6C300370EAF /* FPSignInView.xib */; };
+		6DBF44061F9AF6DF00370EAF /* FPDisambiguationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44051F9AF6DF00370EAF /* FPDisambiguationController.swift */; };
+		6DBF44091F9AF70100370EAF /* FPSignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44081F9AF70100370EAF /* FPSignUpController.swift */; };
+		6DBF440B1F9AF70E00370EAF /* FPSignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF440A1F9AF70E00370EAF /* FPSignInController.swift */; };
+		6DBF440E1F9AF81700370EAF /* FPConstantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF440D1F9AF81700370EAF /* FPConstantsManager.swift */; };
+		6DBF44111F9AFF7C00370EAF /* FPPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */; };
+		6DBF44141F9B009800370EAF /* FPPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */; };
+		6DBF44161F9B013600370EAF /* FPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44151F9B013600370EAF /* FPRequests.swift */; };
+		87BD3B1711FECB451409024E /* Pods_FacePayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE9B2ABB9B6D2207F0A2D249 /* Pods_FacePayTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +43,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2298D959AEA902E84FFC87C3 /* Pods-FacePayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests.release.xcconfig"; sourceTree = "<group>"; };
+		322C9298085860CE02751710 /* Pods-FacePayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayUITests/Pods-FacePayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		33ACCFCA3A8BBEF4D937DEB6 /* Pods_FacePay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacePay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6662AA95C83A41440395DE24 /* Pods-FacePayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayUITests/Pods-FacePayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D00E0C41F9AEB4B002C8F7D /* FacePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D00E0D11F9AEB4B002C8F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D00E0D31F9AEB4B002C8F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D00E0D81F9AEB4B002C8F7D /* FacePayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacePayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D00E0DC1F9AEB4B002C8F7D /* FacePayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePayTests.swift; sourceTree = "<group>"; };
-		6D00E0DE1F9AEB4B002C8F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D00E0E31F9AEB4B002C8F7D /* FacePayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacePayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D00E0E71F9AEB4B002C8F7D /* FacePayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePayUITests.swift; sourceTree = "<group>"; };
-		6D00E0E91F9AEB4B002C8F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPWelcomeView.xib; sourceTree = "<group>"; };
-		6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPWelcomeController.swift; sourceTree = "<group>"; };
+		6DBF43FC1F9AF64A00370EAF /* FPDisambiguationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPDisambiguationView.xib; sourceTree = "<group>"; };
+		6DBF44011F9AF6B900370EAF /* FPSignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSignUpView.xib; sourceTree = "<group>"; };
+		6DBF44031F9AF6C300370EAF /* FPSignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSignInView.xib; sourceTree = "<group>"; };
+		6DBF44051F9AF6DF00370EAF /* FPDisambiguationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPDisambiguationController.swift; sourceTree = "<group>"; };
+		6DBF44081F9AF70100370EAF /* FPSignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSignUpController.swift; sourceTree = "<group>"; };
+		6DBF440A1F9AF70E00370EAF /* FPSignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSignInController.swift; sourceTree = "<group>"; };
+		6DBF440D1F9AF81700370EAF /* FPConstantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPConstantsManager.swift; sourceTree = "<group>"; };
+		6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPaymentView.xib; sourceTree = "<group>"; };
+		6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPaymentViewController.swift; sourceTree = "<group>"; };
+		6DBF44151F9B013600370EAF /* FPRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPRequests.swift; sourceTree = "<group>"; };
+		A5F510A651DF0494DF65D757 /* Pods-FacePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.debug.xcconfig"; sourceTree = "<group>"; };
+		AE9B2ABB9B6D2207F0A2D249 /* Pods_FacePayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacePayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39DD8585D7BED8532257BD7 /* Pods-FacePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.release.xcconfig"; sourceTree = "<group>"; };
+		C9FC5EDC2F62BA0CB5736743 /* Pods-FacePayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF74E0ECDDC977A2EF46C62E /* Pods_FacePayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacePayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A1A69E1E0F0BEEF708A2B1 /* Pods_FacePay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BD3B1711FECB451409024E /* Pods_FacePayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6465E58501B2554394B1828C /* Pods_FacePayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				6D00E0C61F9AEB4B002C8F7D /* FacePay */,
-				6D00E0DB1F9AEB4B002C8F7D /* FacePayTests */,
-				6D00E0E61F9AEB4B002C8F7D /* FacePayUITests */,
 				6D00E0C51F9AEB4B002C8F7D /* Products */,
+				777B5BC1ABB6547893080416 /* Pods */,
+				AF11B07FF1BD1F934BD8A401 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,32 +126,16 @@
 				6D00E0F81F9AEC75002C8F7D /* Controllers */,
 				6D00E0F71F9AEC70002C8F7D /* XIB files */,
 				6D00E0D31F9AEB4B002C8F7D /* Info.plist */,
+				6DBF440C1F9AF7F400370EAF /* Utilities */,
 			);
 			path = FacePay;
-			sourceTree = "<group>";
-		};
-		6D00E0DB1F9AEB4B002C8F7D /* FacePayTests */ = {
-			isa = PBXGroup;
-			children = (
-				6D00E0DC1F9AEB4B002C8F7D /* FacePayTests.swift */,
-				6D00E0DE1F9AEB4B002C8F7D /* Info.plist */,
-			);
-			path = FacePayTests;
-			sourceTree = "<group>";
-		};
-		6D00E0E61F9AEB4B002C8F7D /* FacePayUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6D00E0E71F9AEB4B002C8F7D /* FacePayUITests.swift */,
-				6D00E0E91F9AEB4B002C8F7D /* Info.plist */,
-			);
-			path = FacePayUITests;
 			sourceTree = "<group>";
 		};
 		6D00E0F71F9AEC70002C8F7D /* XIB files */ = {
 			isa = PBXGroup;
 			children = (
-				6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */,
+				6DBF440F1F9AFED400370EAF /* Payment Interface */,
+				6DBF43FE1F9AF68900370EAF /* Verification */,
 				6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */,
 			);
 			path = "XIB files";
@@ -138,10 +145,78 @@
 			isa = PBXGroup;
 			children = (
 				6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */,
-				6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */,
-				6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */,
+				6DBF44121F9AFF8D00370EAF /* Payment Interface */,
+				6DBF44071F9AF6E700370EAF /* Verification */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6DBF43FE1F9AF68900370EAF /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				6DBF43FC1F9AF64A00370EAF /* FPDisambiguationView.xib */,
+				6DBF44011F9AF6B900370EAF /* FPSignUpView.xib */,
+				6DBF44031F9AF6C300370EAF /* FPSignInView.xib */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		6DBF44071F9AF6E700370EAF /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				6DBF44051F9AF6DF00370EAF /* FPDisambiguationController.swift */,
+				6DBF44081F9AF70100370EAF /* FPSignUpController.swift */,
+				6DBF440A1F9AF70E00370EAF /* FPSignInController.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		6DBF440C1F9AF7F400370EAF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6DBF440D1F9AF81700370EAF /* FPConstantsManager.swift */,
+				6DBF44151F9B013600370EAF /* FPRequests.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6DBF440F1F9AFED400370EAF /* Payment Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */,
+			);
+			path = "Payment Interface";
+			sourceTree = "<group>";
+		};
+		6DBF44121F9AFF8D00370EAF /* Payment Interface */ = {
+			isa = PBXGroup;
+			children = (
+				6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */,
+			);
+			path = "Payment Interface";
+			sourceTree = "<group>";
+		};
+		777B5BC1ABB6547893080416 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5F510A651DF0494DF65D757 /* Pods-FacePay.debug.xcconfig */,
+				C39DD8585D7BED8532257BD7 /* Pods-FacePay.release.xcconfig */,
+				C9FC5EDC2F62BA0CB5736743 /* Pods-FacePayTests.debug.xcconfig */,
+				2298D959AEA902E84FFC87C3 /* Pods-FacePayTests.release.xcconfig */,
+				322C9298085860CE02751710 /* Pods-FacePayUITests.debug.xcconfig */,
+				6662AA95C83A41440395DE24 /* Pods-FacePayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF11B07FF1BD1F934BD8A401 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33ACCFCA3A8BBEF4D937DEB6 /* Pods_FacePay.framework */,
+				AE9B2ABB9B6D2207F0A2D249 /* Pods_FacePayTests.framework */,
+				DF74E0ECDDC977A2EF46C62E /* Pods_FacePayUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D00E0EC1F9AEB4B002C8F7D /* Build configuration list for PBXNativeTarget "FacePay" */;
 			buildPhases = (
+				BE367781F5BD8C21CC65832B /* [CP] Check Pods Manifest.lock */,
 				6D00E0C01F9AEB4B002C8F7D /* Sources */,
 				6D00E0C11F9AEB4B002C8F7D /* Frameworks */,
 				6D00E0C21F9AEB4B002C8F7D /* Resources */,
+				0E384D0C76E475C0A4F57356 /* [CP] Embed Pods Frameworks */,
+				59A89F3C18B743CD12AF5B31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D00E0EF1F9AEB4B002C8F7D /* Build configuration list for PBXNativeTarget "FacePayTests" */;
 			buildPhases = (
+				77176A32C7EA303F8B53A0C6 /* [CP] Check Pods Manifest.lock */,
 				6D00E0D41F9AEB4B002C8F7D /* Sources */,
 				6D00E0D51F9AEB4B002C8F7D /* Frameworks */,
 				6D00E0D61F9AEB4B002C8F7D /* Resources */,
+				EB91A278633DCC5CB561E033 /* [CP] Embed Pods Frameworks */,
+				963CA528A8E65101F0FF4027 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D00E0F21F9AEB4B002C8F7D /* Build configuration list for PBXNativeTarget "FacePayUITests" */;
 			buildPhases = (
+				573ADD9170E1E270727D5393 /* [CP] Check Pods Manifest.lock */,
 				6D00E0DF1F9AEB4B002C8F7D /* Sources */,
 				6D00E0E01F9AEB4B002C8F7D /* Frameworks */,
 				6D00E0E11F9AEB4B002C8F7D /* Resources */,
+				4905526DEDA54B76176A2FFF /* [CP] Embed Pods Frameworks */,
+				6703E8AD8F7365D78E7E3301 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,8 +335,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBF43FD1F9AF64A00370EAF /* FPDisambiguationView.xib in Resources */,
 				6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */,
-				6D00E0F61F9AEC68002C8F7D /* FPWelcomeView.xib in Resources */,
+				6DBF44041F9AF6C300370EAF /* FPSignInView.xib in Resources */,
+				6DBF44021F9AF6B900370EAF /* FPSignUpView.xib in Resources */,
+				6DBF44111F9AFF7C00370EAF /* FPPaymentView.xib in Resources */,
 				6D00E0CF1F9AEB4B002C8F7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,14 +360,168 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E384D0C76E475C0A4F57356 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FacePay/Pods-FacePay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePay/Pods-FacePay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4905526DEDA54B76176A2FFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePayUITests/Pods-FacePayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		573ADD9170E1E270727D5393 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FacePayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59A89F3C18B743CD12AF5B31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePay/Pods-FacePay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6703E8AD8F7365D78E7E3301 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePayUITests/Pods-FacePayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77176A32C7EA303F8B53A0C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FacePayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		963CA528A8E65101F0FF4027 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE367781F5BD8C21CC65832B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FacePay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB91A278633DCC5CB561E033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D00E0C01F9AEB4B002C8F7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D00E0FA1F9AED76002C8F7D /* FPWelcomeController.swift in Sources */,
-				6D00E0CA1F9AEB4B002C8F7D /* ViewController.swift in Sources */,
+				6DBF44161F9B013600370EAF /* FPRequests.swift in Sources */,
+				6DBF44141F9B009800370EAF /* FPPaymentViewController.swift in Sources */,
+				6DBF44061F9AF6DF00370EAF /* FPDisambiguationController.swift in Sources */,
+				6DBF44091F9AF70100370EAF /* FPSignUpController.swift in Sources */,
 				6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */,
+				6DBF440B1F9AF70E00370EAF /* FPSignInController.swift in Sources */,
+				6DBF440E1F9AF81700370EAF /* FPConstantsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D00E0DD1F9AEB4B002C8F7D /* FacePayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D00E0E81F9AEB4B002C8F7D /* FacePayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +675,7 @@
 		};
 		6D00E0ED1F9AEB4B002C8F7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F510A651DF0494DF65D757 /* Pods-FacePay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +691,7 @@
 		};
 		6D00E0EE1F9AEB4B002C8F7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39DD8585D7BED8532257BD7 /* Pods-FacePay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +707,7 @@
 		};
 		6D00E0F01F9AEB4B002C8F7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9FC5EDC2F62BA0CB5736743 /* Pods-FacePayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +724,7 @@
 		};
 		6D00E0F11F9AEB4B002C8F7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2298D959AEA902E84FFC87C3 /* Pods-FacePayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +741,7 @@
 		};
 		6D00E0F31F9AEB4B002C8F7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322C9298085860CE02751710 /* Pods-FacePayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,6 +757,7 @@
 		};
 		6D00E0F41F9AEB4B002C8F7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6662AA95C83A41440395DE24 /* Pods-FacePayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,5 +1,5 @@
 //
-//  FPWelcomeView.swift
+//  FPSignInController.swift
 //  FacePay
 //
 //  Created by Bruce Brookshire on 10/20/17.
@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-class FPWelcomeController:    UIViewController
 
-{
-    
-    
+class FPSignInController: UIViewController {
     
 }
