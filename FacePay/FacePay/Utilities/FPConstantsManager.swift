@@ -17,8 +17,8 @@ class FPConstantsManager {
 }
 
 struct CapitalOneAPIKeys {
-    static let appID = ""
-    static let key = ""
+    static let baseURL = "http://api.reimaginebanking.com"
+    static let appID = "3dc98b7092849aee4831c2d8a79b4b89"
 }
 
 
@@ -31,4 +31,13 @@ struct XIBFiles {
     static let DISAMBIGUATIONVIEW = "FPDisambiguationView"
     static let SIGNUPVIEW = "FPSignUpView"
     static let SIGNINVIEW = "FPSignInView"
+}
+
+struct User : Decodable {
+    let _id: String
+    let type: String
+    let nickname: String
+    let rewards: Double
+    let balance: Double
+    let customer_id: String
 }
