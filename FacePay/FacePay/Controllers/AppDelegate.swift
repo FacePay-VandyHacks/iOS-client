@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let defaults = UserDefaults.standard
         
-        if let accountKey = defaults.object(forKey: "accountID") as? String{
+        if let accountKey = defaults.object(forKey: DefaultsKeys.accountSecret) as? String{
             FPConstantsManager.sharedInstance.accountSecret = accountKey
-            VC = FPPaymentViewController(nibName: XIBFiles.PAYMENTVIEW, bundle: nil)
+            VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
         } else {
             VC = FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil)
         }

@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import AVFoundation
 
-
 class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate {
  
     var captureSession: AVCaptureSession?
@@ -20,16 +19,19 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
     @IBOutlet weak var previewView: UIView!
     
     override func viewDidLoad() {
-        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
         do {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            let input = try AVCaptureDeviceInput(device: cameraWithPosition(.front)!)
             captureSession = AVCaptureSession()
             captureSession?.addInput(input)
             
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
             videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
+            videoPreviewLayer?.frame = previewView.layer.bounds
             previewView.layer.addSublayer(videoPreviewLayer!)
             
             captureSession?.startRunning()
@@ -41,7 +43,6 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
         } catch {
             print(error)
         }
-        
     }
     
     @IBAction func tappedCapture () {
@@ -77,9 +78,17 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
         }
         // Initialise a UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
-        
-        
     }
     
-    
+    // Find a camera with the specified AVCaptureDevicePosition, returning nil if one is not found
+    func cameraWithPosition(_ position: AVCaptureDevice.Position) -> AVCaptureDevice?
+    {
+        let devices = AVCaptureDevice.devices(for: AVMediaType.video)
+        for device in devices {
+            if device.position == position {
+                return device
+            }
+        }
+        return nil
+    }
 }

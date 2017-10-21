@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPSignUpPhotosController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="previewView" destination="65m-IG-AZw" id="dNb-it-Dfk"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BSv-d1-5Gi"/>
             </connections>
         </placeholder>
@@ -19,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Take a photo of your face for facial recognition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-hn-179">
-                    <rect key="frame" x="44" y="116" width="287" height="45"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo of your face for facial recognition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vN-hn-179">
+                    <rect key="frame" x="44" y="114.5" width="287" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="BA1-sQ-zib"/>
                     </constraints>
@@ -29,18 +30,29 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-Mx-OuQ">
-                    <rect key="frame" x="160" y="479.5" width="55" height="30"/>
+                    <rect key="frame" x="160" y="519.5" width="55" height="30"/>
                     <state key="normal" title="Capture">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65m-IG-AZw">
+                    <rect key="frame" x="24" y="183.5" width="327" height="320"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="1gE-qX-f2F"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
+                <constraint firstItem="ji9-Mx-OuQ" firstAttribute="top" secondItem="65m-IG-AZw" secondAttribute="bottom" constant="16" id="Dpj-xn-3HX"/>
+                <constraint firstItem="65m-IG-AZw" firstAttribute="top" secondItem="0vN-hn-179" secondAttribute="bottom" constant="24" id="EP3-m5-NoO"/>
+                <constraint firstItem="65m-IG-AZw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="Li9-MR-auy"/>
                 <constraint firstItem="0vN-hn-179" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Mrt-Qh-KjE"/>
+                <constraint firstItem="65m-IG-AZw" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="XcO-ZH-8HC"/>
                 <constraint firstItem="0vN-hn-179" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="44" id="aYX-ft-riT"/>
                 <constraint firstItem="ji9-Mx-OuQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uCu-Fi-fyj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ji9-Mx-OuQ" secondAttribute="bottom" constant="157.5" id="uHk-H3-76p"/>
+                <constraint firstItem="65m-IG-AZw" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="w7u-5r-77v"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>

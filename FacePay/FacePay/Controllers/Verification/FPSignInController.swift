@@ -16,7 +16,9 @@ class FPSignInController: UIViewController {
     
     
     @IBAction func signedIn() {
-        
+        let defaults = UserDefaults.standard
+        defaults.set("59eacfa8a73e4942cdafe3ad", forKey: DefaultsKeys.accountSecret)
+        defaults.synchronize()
     }
     
 }

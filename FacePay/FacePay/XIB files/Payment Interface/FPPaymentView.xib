@@ -5,12 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPPaymentViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="previewView" destination="M1T-m1-Kgn" id="B6b-bd-Gla"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CLX-lr-HxB"/>
             </connections>
         </placeholder>
@@ -18,8 +20,69 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1T-m1-Kgn">
+                    <rect key="frame" x="16" y="96" width="342" height="342"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="M1T-m1-Kgn" secondAttribute="height" multiplier="1:1" id="16T-z8-4p5"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-8M-hB1">
+                    <rect key="frame" x="80" y="44" width="215" height="29"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <segments>
+                        <segment title="Send"/>
+                        <segment title="Receive"/>
+                    </segments>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYx-lt-SEe">
+                    <rect key="frame" x="158.5" y="450" width="58" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Capture">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWj-XS-rW3">
+                    <rect key="frame" x="120" y="521" width="135" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tm-v9-R8V">
+                    <rect key="frame" x="167.5" y="488" width="40" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-3U-Hp9">
+                    <rect key="frame" x="268" y="521" width="34" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="vSi-3U-Hp9" firstAttribute="centerY" secondItem="pWj-XS-rW3" secondAttribute="centerY" id="5tV-cm-bqg"/>
+                <constraint firstItem="UWh-8M-hB1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Bm7-YA-aBb"/>
+                <constraint firstItem="3tm-v9-R8V" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Eph-xd-2lg"/>
+                <constraint firstItem="pWj-XS-rW3" firstAttribute="top" secondItem="3tm-v9-R8V" secondAttribute="bottom" constant="12" id="Neo-FH-sVJ"/>
+                <constraint firstItem="NYx-lt-SEe" firstAttribute="top" secondItem="M1T-m1-Kgn" secondAttribute="bottom" constant="12" id="OdX-Oy-kVT"/>
+                <constraint firstItem="3tm-v9-R8V" firstAttribute="top" secondItem="NYx-lt-SEe" secondAttribute="bottom" constant="8" id="QN3-lP-Q9U"/>
+                <constraint firstItem="M1T-m1-Kgn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TA6-xz-uNp"/>
+                <constraint firstItem="M1T-m1-Kgn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="TSb-fd-kFB"/>
+                <constraint firstItem="NYx-lt-SEe" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="TqT-0H-Vvl"/>
+                <constraint firstItem="M1T-m1-Kgn" firstAttribute="top" secondItem="UWh-8M-hB1" secondAttribute="bottom" constant="24" id="dBj-jQ-YxL"/>
+                <constraint firstItem="pWj-XS-rW3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="120" id="lQx-ES-gB0"/>
+                <constraint firstItem="vSi-3U-Hp9" firstAttribute="leading" secondItem="pWj-XS-rW3" secondAttribute="trailing" constant="13" id="mTT-Hb-Ukr"/>
+                <constraint firstItem="UWh-8M-hB1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="pWZ-No-l1n"/>
+                <constraint firstItem="UWh-8M-hB1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="toS-De-oTj"/>
+                <constraint firstItem="pWj-XS-rW3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="u4d-3y-74a"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
 </document>

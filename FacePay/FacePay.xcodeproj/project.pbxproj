@@ -12,6 +12,11 @@
 		6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */; };
 		6DA5598A1F9BBFA900DEF318 /* FPSignUpPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA559891F9BBFA900DEF318 /* FPSignUpPhotosController.swift */; };
 		6DA5598C1F9BC17100DEF318 /* FPSignUpPhotosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5598B1F9BC17100DEF318 /* FPSignUpPhotosView.xib */; };
+		6DA5598E1F9BD30500DEF318 /* FPAmountConfirmationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5598D1F9BD30500DEF318 /* FPAmountConfirmationView.xib */; };
+		6DA559901F9BD48700DEF318 /* FPHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA5598F1F9BD48700DEF318 /* FPHomeView.xib */; };
+		6DA559921F9BD55700DEF318 /* FPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA559911F9BD55700DEF318 /* FPHomeViewController.swift */; };
+		6DA559941F9BD69F00DEF318 /* FPAccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DA559931F9BD69F00DEF318 /* FPAccountView.xib */; };
+		6DA559961F9BD70100DEF318 /* FPAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA559951F9BD70100DEF318 /* FPAccountViewController.swift */; };
 		6DBF43FD1F9AF64A00370EAF /* FPDisambiguationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF43FC1F9AF64A00370EAF /* FPDisambiguationView.xib */; };
 		6DBF44021F9AF6B900370EAF /* FPSignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44011F9AF6B900370EAF /* FPSignUpView.xib */; };
 		6DBF44041F9AF6C300370EAF /* FPSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44031F9AF6C300370EAF /* FPSignInView.xib */; };
@@ -51,6 +56,11 @@
 		6D00E0E31F9AEB4B002C8F7D /* FacePayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacePayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA559891F9BBFA900DEF318 /* FPSignUpPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPSignUpPhotosController.swift; sourceTree = "<group>"; };
 		6DA5598B1F9BC17100DEF318 /* FPSignUpPhotosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSignUpPhotosView.xib; sourceTree = "<group>"; };
+		6DA5598D1F9BD30500DEF318 /* FPAmountConfirmationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPAmountConfirmationView.xib; sourceTree = "<group>"; };
+		6DA5598F1F9BD48700DEF318 /* FPHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPHomeView.xib; sourceTree = "<group>"; };
+		6DA559911F9BD55700DEF318 /* FPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPHomeViewController.swift; sourceTree = "<group>"; };
+		6DA559931F9BD69F00DEF318 /* FPAccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPAccountView.xib; sourceTree = "<group>"; };
+		6DA559951F9BD70100DEF318 /* FPAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPAccountViewController.swift; sourceTree = "<group>"; };
 		6DBF43FC1F9AF64A00370EAF /* FPDisambiguationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPDisambiguationView.xib; sourceTree = "<group>"; };
 		6DBF44011F9AF6B900370EAF /* FPSignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSignUpView.xib; sourceTree = "<group>"; };
 		6DBF44031F9AF6C300370EAF /* FPSignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPSignInView.xib; sourceTree = "<group>"; };
@@ -173,6 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */,
+				6DA5598D1F9BD30500DEF318 /* FPAmountConfirmationView.xib */,
+				6DA5598F1F9BD48700DEF318 /* FPHomeView.xib */,
+				6DA559931F9BD69F00DEF318 /* FPAccountView.xib */,
 			);
 			path = "Payment Interface";
 			sourceTree = "<group>";
@@ -181,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */,
+				6DA559911F9BD55700DEF318 /* FPHomeViewController.swift */,
+				6DA559951F9BD70100DEF318 /* FPAccountViewController.swift */,
 			);
 			path = "Payment Interface";
 			sourceTree = "<group>";
@@ -294,7 +309,10 @@
 			files = (
 				6DBF43FD1F9AF64A00370EAF /* FPDisambiguationView.xib in Resources */,
 				6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */,
+				6DA559941F9BD69F00DEF318 /* FPAccountView.xib in Resources */,
+				6DA559901F9BD48700DEF318 /* FPHomeView.xib in Resources */,
 				6DBF44041F9AF6C300370EAF /* FPSignInView.xib in Resources */,
+				6DA5598E1F9BD30500DEF318 /* FPAmountConfirmationView.xib in Resources */,
 				6DA5598C1F9BC17100DEF318 /* FPSignUpPhotosView.xib in Resources */,
 				6DBF44021F9AF6B900370EAF /* FPSignUpView.xib in Resources */,
 				6DBF44111F9AFF7C00370EAF /* FPPaymentView.xib in Resources */,
@@ -323,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA559961F9BD70100DEF318 /* FPAccountViewController.swift in Sources */,
 				6DBF44161F9B013600370EAF /* FPRequests.swift in Sources */,
+				6DA559921F9BD55700DEF318 /* FPHomeViewController.swift in Sources */,
 				6DBF44141F9B009800370EAF /* FPPaymentViewController.swift in Sources */,
 				6DBF44061F9AF6DF00370EAF /* FPDisambiguationController.swift in Sources */,
 				6DBF44091F9AF70100370EAF /* FPSignUpController.swift in Sources */,

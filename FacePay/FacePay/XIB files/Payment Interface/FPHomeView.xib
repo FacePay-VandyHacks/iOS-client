@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPHomeViewController" customModule="FacePay" customModuleProvider="target">
+            <connections>
+                <outlet property="accountBtn" destination="T22-7b-GVV" id="7qY-VT-h6c"/>
+                <outlet property="transactionBtn" destination="fWJ-Iw-TLK" id="xkQ-KK-K2u"/>
+                <outlet property="view" destination="iN0-l3-epB" id="P76-jg-BtL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to FacePay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcA-kZ-XAK">
+                    <rect key="frame" x="102.5" y="201.5" width="170.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T22-7b-GVV">
+                    <rect key="frame" x="95.5" y="286.5" width="183" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="View Account">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedAccount" destination="-1" eventType="touchUpInside" id="RyW-zI-s92"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-Iw-TLK">
+                    <rect key="frame" x="96" y="328.5" width="183" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Make a Transaction">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedTransaction" destination="-1" eventType="touchUpInside" id="ZXP-bY-VjE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="width" secondItem="T22-7b-GVV" secondAttribute="width" id="26X-ey-ogH"/>
+                <constraint firstItem="DcA-kZ-XAK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="5cK-bR-6it"/>
+                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="HqB-yg-RBb"/>
+                <constraint firstItem="T22-7b-GVV" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Y1m-Qs-jZ1"/>
+                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="jwU-WN-9c5"/>
+                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="96" id="mH3-OP-QkN"/>
+                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="top" secondItem="T22-7b-GVV" secondAttribute="bottom" constant="12" id="qaw-Az-hLb"/>
+                <constraint firstItem="T22-7b-GVV" firstAttribute="top" secondItem="DcA-kZ-XAK" secondAttribute="bottom" constant="64" id="uX8-qQ-pdx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

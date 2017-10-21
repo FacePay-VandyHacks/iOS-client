@@ -26,10 +26,16 @@ struct DefaultsKeys {
 }
 
 struct XIBFiles {
+    //HOME/PAYMENT
     static let PAYMENTVIEW = "FPPaymentView"
+    static let HOMEVIEW = "FPHomeView"
+    static let ACCOUNTVIEW = "FPAccountView"
+    
+    //SIGNUP/SIGNIN
     static let DISAMBIGUATIONVIEW = "FPDisambiguationView"
     static let SIGNUPVIEW = "FPSignUpView"
     static let SIGNINVIEW = "FPSignInView"
     static let SIGNUPPHOTOSVIEW = "FPSignUpPhotosView"
+    
 }
 
