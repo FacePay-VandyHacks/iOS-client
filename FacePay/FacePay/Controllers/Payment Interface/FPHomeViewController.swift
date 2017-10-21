@@ -17,25 +17,28 @@ class FPHomeViewController : UIViewController {
     @IBOutlet weak var transactionBtn: UIButton!
     
     override func viewDidLoad() {
-        accountBtn.layer.borderColor = UIColor.white.cgColor
-        accountBtn.layer.borderWidth = 1
+        
+        self.title = "Welcome"
+        
+        accountBtn.layer.borderColor = Colors.FPGreen.cgColor
+        accountBtn.layer.borderWidth = 2
         accountBtn.layer.cornerRadius = 5
         
-        transactionBtn.layer.borderColor = UIColor.white.cgColor
-        transactionBtn.layer.borderWidth = 1
+        transactionBtn.layer.borderColor = Colors.FPGreen.cgColor
+        transactionBtn.layer.borderWidth = 2
         transactionBtn.layer.cornerRadius = 5
         
     }
     
     @IBAction func tappedAccount() {
         
-        
+        self.navigationController?.pushViewController(FPAccountViewController(nibName: XIBFiles.ACCOUNTVIEW, bundle: nil) , animated: true)
         
     }
     
     
     @IBAction func tappedTransaction() {
-        
+        self.navigationController?.pushViewController(FPPaymentViewController(nibName: XIBFiles.PAYMENTVIEW, bundle: nil), animated: true)
     }
     
     

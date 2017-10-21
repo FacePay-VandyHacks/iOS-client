@@ -13,10 +13,15 @@ import UIKit
 class FPAccountViewController : UIViewController {
     
     @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var balanceLabel: UILabel!
     
     override func viewDidLoad() {
-        logoutBtn.layer.borderColor = UIcolor.white.cgcolor
-        logoutBtn.layer.borderWidth = 1
+        balanceLabel.text = "$1,000.00"
+        
+        self.title = "Preferences"
+        
+        logoutBtn.layer.borderColor = UIColor.red.cgColor
+        logoutBtn.layer.borderWidth = 2
         logoutBtn.layer.cornerRadius = 5
     }
     
@@ -24,9 +29,12 @@ class FPAccountViewController : UIViewController {
     
     
     @IBAction func logout() {
-        self.navigationController?.push()
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: DefaultsKeys.accountSecret)
+        defaults.synchronize()
         
-        
+        FPConstantsManager.sharedInstance.window?.rootViewController = UINavigationController(rootViewController: FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil))
+        FPConstantsManager.sharedInstance.window?.makeKeyAndVisible()
         
     }
     

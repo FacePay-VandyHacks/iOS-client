@@ -17,12 +17,12 @@ class FPDisambiguationController: UIViewController {
     override func viewDidLoad() {
         self.title = "Welcome!"
         
-        logInBtn.layer.borderColor = self.view.tintColor.cgColor
-        logInBtn.layer.borderWidth = 1
+        logInBtn.layer.borderColor = Colors.FPGreen.cgColor
+        logInBtn.layer.borderWidth = 2
         logInBtn.layer.cornerRadius = 5
         
-        signUpBtn.layer.borderColor = self.view.tintColor.cgColor
-        signUpBtn.layer.borderWidth = 1
+        signUpBtn.layer.borderColor = Colors.FPGreen.cgColor
+        signUpBtn.layer.borderWidth = 2
         signUpBtn.layer.cornerRadius = 5
     }
     

@@ -28,14 +28,17 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sw-bt-Q1o">
-                    <rect key="frame" x="159" y="327" width="58" height="30"/>
+                    <rect key="frame" x="98" y="327" width="180" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="1Ie-bg-wHC"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Confirm">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="5Sw-bt-Q1o" firstAttribute="top" secondItem="YFC-zW-Szp" secondAttribute="bottom" constant="32" id="GP3-5T-Ihb"/>
                 <constraint firstItem="YFC-zW-Szp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HWp-1u-Of5"/>

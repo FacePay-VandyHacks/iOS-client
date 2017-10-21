@@ -13,7 +13,15 @@ import UIKit
 class FPSignInController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var pswdField: UITextField!
+    @IBOutlet weak var signInBtn: UIButton!
     
+    override func viewDidLoad() {
+        self.title = "Sign In"
+        
+        signInBtn.layer.borderWidth = 2
+        signInBtn.layer.borderColor = Colors.FPGreen.cgColor
+        signInBtn.layer.cornerRadius = 5
+    }
     
     @IBAction func signedIn() {
         let defaults = UserDefaults.standard

@@ -17,6 +17,9 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     var capturePhotoOutput: AVCapturePhotoOutput?
     
     @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var cameraCapture: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         self.title = "Make a Transaction"
@@ -24,25 +27,22 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     }
     
     override func viewDidLayoutSubviews() {
-        do {
-            let input = try AVCaptureDeviceInput(device: cameraWithPosition(.back)!)
-            captureSession = AVCaptureSession()
-            captureSession?.addInput(input)
-            
-            videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
-            videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = previewView.layer.bounds
-            previewView.layer.addSublayer(videoPreviewLayer!)
-            
-            captureSession?.startRunning()
-            
-            capturePhotoOutput = AVCapturePhotoOutput()
-            capturePhotoOutput?.isHighResolutionCaptureEnabled = true
-            
-            captureSession?.addOutput(capturePhotoOutput!)
-        } catch {
-            print(error)
-        }
+        cameraCapture.layer.borderColor = Colors.FPGreen.cgColor
+        cameraCapture.layer.borderWidth = 2
+        cameraCapture.layer.cornerRadius = 5
+        
+        nextButton.layer.borderColor = Colors.FPGreen.cgColor
+        nextButton.layer.borderWidth = 2
+        nextButton.layer.cornerRadius = 5
+        
+        previewView.clipsToBounds = true
+        previewView.layer.cornerRadius = previewView.frame.width/2
+        
+        loadCamera()
+    }
+    
+    @IBAction func tappedNext() {
+        
     }
     
     @IBAction func tappedCapture () {
@@ -57,6 +57,44 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         // Call capturePhoto method by passing our photo settings and a
         // delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+    
+    func loadCamera() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        previewView.backgroundColor = Colors.FPBlue
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            DispatchQueue.main.async {
+                
+                do {
+                    let input = try AVCaptureDeviceInput(device: self.cameraWithPosition(.back)!)
+                    self.captureSession = AVCaptureSession()
+                    self.captureSession?.addInput(input)
+                    
+                    self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession!)
+                    self.videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+                    self.videoPreviewLayer?.frame = self.previewView.layer.bounds
+                    self.previewView.layer.addSublayer(self.videoPreviewLayer!)
+                    
+                    self.captureSession?.startRunning()
+                    
+                    self.capturePhotoOutput = AVCapturePhotoOutput()
+                    self.capturePhotoOutput?.isHighResolutionCaptureEnabled = true
+                    
+                    self.captureSession?.addOutput(self.capturePhotoOutput!)
+                } catch {
+                    print(error)
+                }
+                
+                self.activityIndicator.stopAnimating()
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.previewView.backgroundColor = .white
+                    self.activityIndicator.isHidden = true
+                })
+            }
+        }
+        
     }
     
     func photoOutput(_ captureOutput: AVCapturePhotoOutput,
@@ -78,6 +116,8 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         }
         // Initialise a UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
+        
+        FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!)
     }
     
     // Find a camera with the specified AVCaptureDevicePosition, returning nil if one is not found

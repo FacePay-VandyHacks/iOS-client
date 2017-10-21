@@ -6,7 +6,8 @@ target 'FacePay' do
   use_frameworks!
 
   # Pods for FacePay
-  pod 'SwiftyJSON'
+    pod 'AWSCognito'
+    pod 'AWSS3'
   target 'FacePayTests' do
     inherit! :search_paths
     # Pods for testing

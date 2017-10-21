@@ -7,13 +7,20 @@
 //
 
 import Foundation
+import UIKit
 
 class FPConstantsManager {
     static let sharedInstance = FPConstantsManager()
     
     var accountSecret: String?
+    var window: UIWindow?
     var userName: String?
     
+}
+
+struct Colors {
+    static let FPGreen = UIColor(red: 46/256, green: 216/256, blue: 139/256, alpha: 1.0)
+    static let FPBlue = UIColor(red: 76/256, green: 139/256, blue: 191/256, alpha: 1.0)
 }
 
 struct FPAPIKeys {

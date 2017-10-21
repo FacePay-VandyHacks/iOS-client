@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPAccountViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="balanceLabel" destination="sSb-DW-uqB" id="zwj-Sn-QCH"/>
                 <outlet property="logoutBtn" destination="Vcu-cq-ZbB" id="sxk-fd-SAd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="G3O-BU-wLZ"/>
             </connections>
@@ -27,33 +28,33 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BalanceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-DW-uqB">
-                    <rect key="frame" x="135.5" y="280" width="105" height="21"/>
+                    <rect key="frame" x="135.5" y="266" width="105" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-cq-ZbB">
-                    <rect key="frame" x="155" y="421" width="64" height="30"/>
+                    <rect key="frame" x="97" y="517" width="180" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="64" id="Kg6-A1-yga"/>
+                        <constraint firstAttribute="width" constant="180" id="Kg6-A1-yga"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Logout">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="logout" destination="-1" eventType="touchUpInside" id="H2s-nA-f5z"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="H35-kD-KtP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="193" id="0ZZ-wm-ooK"/>
                 <constraint firstItem="H35-kD-KtP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="KYN-Cf-Zl9"/>
-                <constraint firstItem="Vcu-cq-ZbB" firstAttribute="top" secondItem="sSb-DW-uqB" secondAttribute="bottom" constant="120" id="RFw-lF-5rW"/>
-                <constraint firstItem="sSb-DW-uqB" firstAttribute="top" secondItem="H35-kD-KtP" secondAttribute="bottom" constant="46" id="d4q-Nj-LZC"/>
+                <constraint firstItem="sSb-DW-uqB" firstAttribute="top" secondItem="H35-kD-KtP" secondAttribute="bottom" constant="32" id="d4q-Nj-LZC"/>
                 <constraint firstItem="sSb-DW-uqB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hG4-x6-BRs"/>
                 <constraint firstItem="Vcu-cq-ZbB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mga-bV-5Lh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vcu-cq-ZbB" secondAttribute="bottom" constant="120" id="yfW-A9-HPy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>

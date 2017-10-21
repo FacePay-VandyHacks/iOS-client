@@ -6,18 +6,23 @@
 //  Copyright © 2017 VandyHacks. All rights reserved.
 //
 
+import AWSCore
+import AWSCognito
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:106931b0-67c5-4655-b747-dcb92a5e81ec")
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        FPConstantsManager.sharedInstance.window = UIWindow(frame: UIScreen.main.bounds)
+        var window = FPConstantsManager.sharedInstance.window!
         
         var VC: UIViewController?
         
@@ -30,14 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             VC = FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil)
         }
         
-        
-        
         let navController = UINavigationController(rootViewController: VC!)
+        navController.navigationBar.tintColor = Colors.FPGreen
+        navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: Colors.FPBlue]
+        navController.navigationBar.barTintColor = UIColor.white
         
-        self.window?.rootViewController = navController
-        self.window?.makeKeyAndVisible()
-        
-        
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
         
         return true
     }

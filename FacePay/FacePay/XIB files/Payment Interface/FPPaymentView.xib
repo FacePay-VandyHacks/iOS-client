@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPPaymentViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ytl-6q-P3b" id="zRv-at-YmC"/>
+                <outlet property="cameraCapture" destination="NYx-lt-SEe" id="oXN-8J-BrE"/>
+                <outlet property="nextButton" destination="vSi-3U-Hp9" id="DjB-9n-K5T"/>
                 <outlet property="previewView" destination="M1T-m1-Kgn" id="B6b-bd-Gla"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CLX-lr-HxB"/>
             </connections>
@@ -23,25 +26,31 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1T-m1-Kgn">
                     <rect key="frame" x="16" y="96" width="342" height="342"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.29803921570000003" green="0.5450980392" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="M1T-m1-Kgn" secondAttribute="height" multiplier="1:1" id="16T-z8-4p5"/>
                     </constraints>
                 </view>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-8M-hB1">
                     <rect key="frame" x="80" y="44" width="215" height="29"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <segments>
                         <segment title="Send"/>
                         <segment title="Receive"/>
                     </segments>
+                    <color key="tintColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYx-lt-SEe">
-                    <rect key="frame" x="158.5" y="450" width="58" height="30"/>
+                    <rect key="frame" x="97.5" y="450" width="180" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="Hzv-Al-woJ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Capture">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
+                    <connections>
+                        <action selector="tappedCapture" destination="-1" eventType="touchUpInside" id="VL8-Nj-pNN"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWj-XS-rW3">
                     <rect key="frame" x="120" y="521" width="135" height="30"/>
@@ -56,14 +65,24 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-3U-Hp9">
-                    <rect key="frame" x="268" y="521" width="34" height="30"/>
+                    <rect key="frame" x="268" y="521" width="44" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="lx4-wO-CBu"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Next">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
+                    <connections>
+                        <action selector="tappedNext" destination="-1" eventType="touchUpInside" id="IVQ-zK-Pcd"/>
+                    </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ytl-6q-P3b">
+                    <rect key="frame" x="169" y="249" width="37" height="37"/>
+                    <color key="color" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
+                </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="vSi-3U-Hp9" firstAttribute="centerY" secondItem="pWj-XS-rW3" secondAttribute="centerY" id="5tV-cm-bqg"/>
                 <constraint firstItem="UWh-8M-hB1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Bm7-YA-aBb"/>
@@ -74,12 +93,14 @@
                 <constraint firstItem="M1T-m1-Kgn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TA6-xz-uNp"/>
                 <constraint firstItem="M1T-m1-Kgn" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="TSb-fd-kFB"/>
                 <constraint firstItem="NYx-lt-SEe" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="TqT-0H-Vvl"/>
+                <constraint firstItem="ytl-6q-P3b" firstAttribute="centerY" secondItem="M1T-m1-Kgn" secondAttribute="centerY" id="W9x-fZ-fR1"/>
                 <constraint firstItem="M1T-m1-Kgn" firstAttribute="top" secondItem="UWh-8M-hB1" secondAttribute="bottom" constant="24" id="dBj-jQ-YxL"/>
                 <constraint firstItem="pWj-XS-rW3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="120" id="lQx-ES-gB0"/>
                 <constraint firstItem="vSi-3U-Hp9" firstAttribute="leading" secondItem="pWj-XS-rW3" secondAttribute="trailing" constant="13" id="mTT-Hb-Ukr"/>
                 <constraint firstItem="UWh-8M-hB1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="pWZ-No-l1n"/>
                 <constraint firstItem="UWh-8M-hB1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="toS-De-oTj"/>
                 <constraint firstItem="pWj-XS-rW3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="u4d-3y-74a"/>
+                <constraint firstItem="ytl-6q-P3b" firstAttribute="centerX" secondItem="M1T-m1-Kgn" secondAttribute="centerX" id="wBt-RQ-oFL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>

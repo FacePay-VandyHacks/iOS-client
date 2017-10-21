@@ -21,45 +21,71 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to FacePay!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcA-kZ-XAK">
-                    <rect key="frame" x="102.5" y="201.5" width="170.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T22-7b-GVV">
-                    <rect key="frame" x="95.5" y="286.5" width="183" height="30"/>
+                    <rect key="frame" x="95.5" y="330" width="183" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="View Account">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                     <connections>
                         <action selector="tappedAccount" destination="-1" eventType="touchUpInside" id="RyW-zI-s92"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-Iw-TLK">
-                    <rect key="frame" x="96" y="328.5" width="183" height="30"/>
+                    <rect key="frame" x="96" y="372" width="183" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                     <state key="normal" title="Make a Transaction">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                     <connections>
                         <action selector="tappedTransaction" destination="-1" eventType="touchUpInside" id="ZXP-bY-VjE"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1Yr-Dp-pbm">
+                    <rect key="frame" x="68" y="64" width="240" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Tp6-mo-wUe"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcA-kZ-XAK">
+                    <rect key="frame" x="89" y="240" width="197" height="26"/>
+                    <attributedString key="attributedText">
+                        <fragment content=" Welcome to ">
+                            <attributes>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" metaFont="system" size="17"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="FacePay">
+                            <attributes>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="21" name="Verdana-BoldItalic"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.91764705879999997" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
                 <constraint firstItem="fWJ-Iw-TLK" firstAttribute="width" secondItem="T22-7b-GVV" secondAttribute="width" id="26X-ey-ogH"/>
                 <constraint firstItem="DcA-kZ-XAK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="5cK-bR-6it"/>
-                <constraint firstItem="fWJ-Iw-TLK" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="HqB-yg-RBb"/>
+                <constraint firstItem="1Yr-Dp-pbm" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="IID-q5-pXb"/>
                 <constraint firstItem="T22-7b-GVV" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Y1m-Qs-jZ1"/>
+                <constraint firstItem="DcA-kZ-XAK" firstAttribute="top" secondItem="1Yr-Dp-pbm" secondAttribute="bottom" constant="16" id="bPJ-Rw-47d"/>
+                <constraint firstItem="T22-7b-GVV" firstAttribute="top" secondItem="DcA-kZ-XAK" secondAttribute="bottom" constant="64" id="dPv-je-mdb"/>
                 <constraint firstItem="fWJ-Iw-TLK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="jwU-WN-9c5"/>
+                <constraint firstItem="1Yr-Dp-pbm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="68" id="m5K-yo-KBJ"/>
                 <constraint firstItem="fWJ-Iw-TLK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="96" id="mH3-OP-QkN"/>
                 <constraint firstItem="fWJ-Iw-TLK" firstAttribute="top" secondItem="T22-7b-GVV" secondAttribute="bottom" constant="12" id="qaw-Az-hLb"/>
-                <constraint firstItem="T22-7b-GVV" firstAttribute="top" secondItem="DcA-kZ-XAK" secondAttribute="bottom" constant="64" id="uX8-qQ-pdx"/>
+                <constraint firstItem="1Yr-Dp-pbm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="44" id="td3-AP-gXh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
+    <resources>
+        <image name="Logo" width="500" height="500"/>
+    </resources>
 </document>
