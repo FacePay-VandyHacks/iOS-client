@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */; };
 		6D00E0CA1F9AEB4B002C8F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */; };
-		6D00E0CD1F9AEB4B002C8F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0CB1F9AEB4B002C8F7D /* Main.storyboard */; };
 		6D00E0CF1F9AEB4B002C8F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */; };
 		6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */; };
 		6D00E0DD1F9AEB4B002C8F7D /* FacePayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0DC1F9AEB4B002C8F7D /* FacePayTests.swift */; };
 		6D00E0E81F9AEB4B002C8F7D /* FacePayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0E71F9AEB4B002C8F7D /* FacePayUITests.swift */; };
+		6D00E0F61F9AEC68002C8F7D /* FPWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */; };
+		6D00E0FA1F9AED76002C8F7D /* FPWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 		6D00E0C41F9AEB4B002C8F7D /* FacePay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacePay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D00E0CC1F9AEB4B002C8F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D00E0D11F9AEB4B002C8F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D00E0D31F9AEB4B002C8F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		6D00E0E31F9AEB4B002C8F7D /* FacePayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacePayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D00E0E71F9AEB4B002C8F7D /* FacePayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePayUITests.swift; sourceTree = "<group>"; };
 		6D00E0E91F9AEB4B002C8F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPWelcomeView.xib; sourceTree = "<group>"; };
+		6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPWelcomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,9 @@
 		6D00E0C61F9AEB4B002C8F7D /* FacePay */ = {
 			isa = PBXGroup;
 			children = (
-				6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */,
-				6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */,
-				6D00E0CB1F9AEB4B002C8F7D /* Main.storyboard */,
 				6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */,
-				6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */,
+				6D00E0F81F9AEC75002C8F7D /* Controllers */,
+				6D00E0F71F9AEC70002C8F7D /* XIB files */,
 				6D00E0D31F9AEB4B002C8F7D /* Info.plist */,
 			);
 			path = FacePay;
@@ -123,6 +123,25 @@
 				6D00E0E91F9AEB4B002C8F7D /* Info.plist */,
 			);
 			path = FacePayUITests;
+			sourceTree = "<group>";
+		};
+		6D00E0F71F9AEC70002C8F7D /* XIB files */ = {
+			isa = PBXGroup;
+			children = (
+				6D00E0F51F9AEC68002C8F7D /* FPWelcomeView.xib */,
+				6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */,
+			);
+			path = "XIB files";
+			sourceTree = "<group>";
+		};
+		6D00E0F81F9AEC75002C8F7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */,
+				6D00E0C91F9AEB4B002C8F7D /* ViewController.swift */,
+				6D00E0F91F9AED76002C8F7D /* FPWelcomeController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */,
+				6D00E0F61F9AEC68002C8F7D /* FPWelcomeView.xib in Resources */,
 				6D00E0CF1F9AEB4B002C8F7D /* Assets.xcassets in Resources */,
-				6D00E0CD1F9AEB4B002C8F7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D00E0FA1F9AED76002C8F7D /* FPWelcomeController.swift in Sources */,
 				6D00E0CA1F9AEB4B002C8F7D /* ViewController.swift in Sources */,
 				6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */,
 			);
@@ -296,14 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D00E0CB1F9AEB4B002C8F7D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D00E0CC1F9AEB4B002C8F7D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D00E0D01F9AEB4B002C8F7D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
