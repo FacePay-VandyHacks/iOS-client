@@ -6,28 +6,43 @@
 //  Copyright © 2017 VandyHacks. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 class FPRequests {
-    func requestCustomerJSON(customer: String) {
-        let urlString = CapitalOneAPIKeys.baseURL + "/customers" + "/" + customer + "/accounts?key=" + CapitalOneAPIKeys.appID
+    
+    static let sharedInstance = FPRequests()
+    
+    
+    func logIn() {
         
-        guard let url = URL(string: urlString) else { return }
+    }
+    
+    func signUp() {
         
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            
-            if error == nil {
-                guard let data = data else { return }
-                
-                do {
-                    let users = try
-                        JSONDecoder().decode([User].self, from: data)
-                    users.forEach {print($0._id)}
-                } catch {
-                    print(error)
-                }
+    }
+    
+    func storeImage(image: UIImage) -> String? {
+        do {
+            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let fileURL = documentsURL.appendingPathComponent(String(arc4random()) + ".png")
+            if let pngImageData = UIImagePNGRepresentation(image) {
+                try pngImageData.write(to: fileURL, options: .atomic)
+                return fileURL.absoluteString
             }
-            }.resume()
+        } catch { print("storing", error) }
+        
+        return nil
+    }
+    
+    func removeImage(url: String) {
+        let fileManager = FileManager.default
+        
+        do {
+            try fileManager.removeItem(atPath: url)
+        }
+        catch {
+            print("removing", error)
+        }
     }
 }

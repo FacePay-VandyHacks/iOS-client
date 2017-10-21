@@ -11,5 +11,12 @@ import UIKit
 
 
 class FPSignInController: UIViewController {
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var pswdField: UITextField!
+    
+    
+    @IBAction func signedIn() {
+        
+    }
     
 }

@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPSignUpController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="errorLbl" destination="RaO-YG-cT6" id="jCn-8x-voF"/>
+                <outlet property="pswdAgainField" destination="d6g-Kn-v6F" id="BuU-tT-vdG"/>
+                <outlet property="pswdField" destination="Mik-0O-Fm9" id="Rt6-GH-w0T"/>
+                <outlet property="usernameField" destination="jf6-R3-CiM" id="WEX-8m-qCa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RNP-iX-Tfg"/>
             </connections>
         </placeholder>
@@ -18,7 +22,63 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please create a username and password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-IF-ugP">
+                    <rect key="frame" x="30" y="183.5" width="315.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-R3-CiM">
+                    <rect key="frame" x="80" y="236.5" width="215" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-0O-Fm9">
+                    <rect key="frame" x="80" y="282.5" width="215" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (again)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-Kn-v6F">
+                    <rect key="frame" x="80" y="328.5" width="215" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error lbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
+                    <rect key="frame" x="163" y="374.5" width="49.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-kb-rDP">
+                    <rect key="frame" x="146" y="402.5" width="83" height="30"/>
+                    <state key="normal" title="Get started!"/>
+                    <connections>
+                        <action selector="tappedGetStarted" destination="-1" eventType="touchUpInside" id="DnZ-X7-dEk"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jf6-R3-CiM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4yX-2C-ulR"/>
+                <constraint firstItem="Lza-kb-rDP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="61Z-xy-PZj"/>
+                <constraint firstItem="Lza-kb-rDP" firstAttribute="top" secondItem="d6g-Kn-v6F" secondAttribute="bottom" constant="44" id="6eX-JD-UVM"/>
+                <constraint firstItem="RaO-YG-cT6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Kn9-6s-52i"/>
+                <constraint firstItem="d6g-Kn-v6F" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MEU-eM-O8b"/>
+                <constraint firstItem="tr5-IF-ugP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="QiG-0x-jgZ"/>
+                <constraint firstItem="d6g-Kn-v6F" firstAttribute="width" secondItem="Mik-0O-Fm9" secondAttribute="width" id="RyP-jp-gwK"/>
+                <constraint firstItem="jf6-R3-CiM" firstAttribute="top" secondItem="tr5-IF-ugP" secondAttribute="bottom" constant="32" id="Ujh-8W-C6M"/>
+                <constraint firstItem="d6g-Kn-v6F" firstAttribute="top" secondItem="Mik-0O-Fm9" secondAttribute="bottom" constant="16" id="dZI-rU-dXS"/>
+                <constraint firstItem="RaO-YG-cT6" firstAttribute="top" secondItem="d6g-Kn-v6F" secondAttribute="bottom" constant="16" id="eji-eD-wTB"/>
+                <constraint firstItem="Mik-0O-Fm9" firstAttribute="width" secondItem="jf6-R3-CiM" secondAttribute="width" id="fyU-kN-2pB"/>
+                <constraint firstItem="Mik-0O-Fm9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kX2-Vc-dKR"/>
+                <constraint firstItem="jf6-R3-CiM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="lkT-eG-ncL"/>
+                <constraint firstItem="d6g-Kn-v6F" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="saC-Bl-a4m"/>
+                <constraint firstItem="Mik-0O-Fm9" firstAttribute="top" secondItem="jf6-R3-CiM" secondAttribute="bottom" constant="16" id="tuS-QY-QBv"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
