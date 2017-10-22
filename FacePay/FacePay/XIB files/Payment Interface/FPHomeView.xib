@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPHomeViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
@@ -22,8 +27,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T22-7b-GVV">
-                    <rect key="frame" x="95.5" y="330" width="183" height="30"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <rect key="frame" x="95.5" y="332" width="183" height="36"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="View Account">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
@@ -32,8 +37,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-Iw-TLK">
-                    <rect key="frame" x="96" y="372" width="183" height="30"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <rect key="frame" x="96" y="380" width="183" height="36"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Make a Transaction">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
@@ -48,18 +53,18 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcA-kZ-XAK">
-                    <rect key="frame" x="89" y="240" width="197" height="26"/>
+                    <rect key="frame" x="85" y="240" width="206" height="28"/>
                     <attributedString key="attributedText">
                         <fragment content=" Welcome to ">
                             <attributes>
-                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" metaFont="system" size="17"/>
+                                <color key="NSColor" red="0.29803921570000003" green="0.5450980392" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
+                                <font key="NSFont" size="18" name="AvenirNext-Medium"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>
                         <fragment content="FacePay">
                             <attributes>
-                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="NSColor" red="0.29803921570000003" green="0.5450980392" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                                 <font key="NSFont" size="21" name="Verdana-BoldItalic"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
@@ -68,7 +73,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fWJ-Iw-TLK" firstAttribute="width" secondItem="T22-7b-GVV" secondAttribute="width" id="26X-ey-ogH"/>
                 <constraint firstItem="DcA-kZ-XAK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="5cK-bR-6it"/>

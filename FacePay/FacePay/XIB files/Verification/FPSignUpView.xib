@@ -9,6 +9,12 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-UltraLight</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPSignUpController" customModule="FacePay" customModuleProvider="target">
             <connections>
@@ -26,9 +32,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please create a username and password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr5-IF-ugP">
-                    <rect key="frame" x="30" y="183.5" width="315.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="32" y="181" width="312" height="23.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="0.29803921570000003" green="0.5450980392" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-R3-CiM">
@@ -49,18 +55,18 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error lbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
-                    <rect key="frame" x="162.5" y="374.5" width="50.5" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error lbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
+                    <rect key="frame" x="159" y="374.5" width="58.5" height="23.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-kb-rDP">
-                    <rect key="frame" x="97.5" y="402.5" width="180" height="30"/>
+                    <rect key="frame" x="97.5" y="402.5" width="180" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="i2X-Dd-I3y"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Get started!">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
@@ -69,13 +75,13 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Name and Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OFD-ub-k7Y">
-                    <rect key="frame" x="94" y="102" width="186" height="62"/>
+                    <rect key="frame" x="94" y="99.5" width="186" height="62"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="OFD-ub-k7Y" secondAttribute="height" multiplier="188:63" id="ZM8-eg-xs7"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.29803921568627451" green="0.54509803921568623" blue="0.74901960784313726" alpha="1" colorSpace="deviceRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="jf6-R3-CiM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4yX-2C-ulR"/>
                 <constraint firstItem="Lza-kb-rDP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="61Z-xy-PZj"/>

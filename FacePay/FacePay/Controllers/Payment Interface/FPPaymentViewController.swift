@@ -51,8 +51,8 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     @objc func uploadComplete() {
         if isUploading {
             isUploading = false
-            let tempURL = FPConstantsManager.sharedInstance.currentUpload
-            FPConstantsManager.sharedInstance.currentUpload = nil
+            let tempURL = FPVariablesManager.sharedInstance.currentUpload
+            FPVariablesManager.sharedInstance.currentUpload = nil
             let VC = FPPaymentConfirmViewController(nibName: XIBFiles.AMOUNTCONFIRMATIONVIEW, bundle: nil)
             VC.uploadURL = tempURL
             self.navigationController?.pushViewController(VC, animated: true)

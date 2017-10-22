@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
-        FPConstantsManager.sharedInstance.window = UIWindow(frame: UIScreen.main.bounds)
-        let window = FPConstantsManager.sharedInstance.window!
+        FPVariablesManager.sharedInstance.window = UIWindow(frame: UIScreen.main.bounds)
+        let window = FPVariablesManager.sharedInstance.window!
         
         var VC: UIViewController?
         
         let defaults = UserDefaults.standard
         
         if let accountKey = defaults.object(forKey: DefaultsKeys.accountSecret) as? String{
-            FPConstantsManager.sharedInstance.accountSecret = accountKey
+            FPVariablesManager.sharedInstance.accountSecret = accountKey
             VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
         } else {
             VC = FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil)

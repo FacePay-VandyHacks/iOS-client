@@ -1,5 +1,5 @@
 //
-//  FPConstantsManager.swift
+//  FPVariablesManager.swift
 //  FacePay
 //
 //  Created by Bruce Brookshire on 10/20/17.
@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
-class FPConstantsManager {
-    static let sharedInstance = FPConstantsManager()
+//Manages data that should persist in session, but not between sessions
+class FPVariablesManager {
+    static let sharedInstance = FPVariablesManager()
     
     var accountSecret: String?
     var window: UIWindow?
@@ -19,20 +20,25 @@ class FPConstantsManager {
     
 }
 
+//Colors used in the app
 struct Colors {
     static let FPGreen = UIColor(red: 46/256, green: 216/256, blue: 139/256, alpha: 1.0)
     static let FPBlue = UIColor(red: 76/256, green: 139/256, blue: 191/256, alpha: 1.0)
 }
 
+//API keys to access capital one
+//TODO: subject to change
 struct FPAPIKeys {
     static let baseURL = "http://api.reimaginebanking.com"
     static let appID = "3dc98b7092849aee4831c2d8a79b4b89"
 }
 
+//Keys to return user defaults information
 struct DefaultsKeys {
     static let accountSecret = "accountSecret"
 }
 
+//Names for all of the XIB files used in the app
 struct XIBFiles {
     //HOME/PAYMENT
     static let PAYMENTVIEW = "FPPaymentView"
@@ -47,6 +53,19 @@ struct XIBFiles {
     static let SIGNUPPHOTOSVIEW = "FPSignUpPhotosView"
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 extension UIImage {

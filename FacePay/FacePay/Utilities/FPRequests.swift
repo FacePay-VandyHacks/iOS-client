@@ -44,7 +44,7 @@ class FPRequests {
                 return nil
             }
             
-            FPConstantsManager.sharedInstance.currentUpload = "https://s3.amazonaws.com/" + bucket + "/" + self.tempKeyName!
+            FPVariablesManager.sharedInstance.currentUpload = "https://s3.amazonaws.com/" + bucket + "/" + self.tempKeyName!
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "aws-upload-complete") , object: nil)
             print("Upload complete for: \(uploadRequest?.key ?? "")")
             return nil
