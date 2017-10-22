@@ -58,6 +58,7 @@ class FPRequests {
         
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
+            print(error)
             if let response = response {
                 print(response)
             }

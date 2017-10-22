@@ -50,10 +50,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-nx-IWb">
-                    <rect key="frame" x="97.5" y="374.5" width="180" height="36"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="180" id="5Vr-kc-WnD"/>
-                    </constraints>
+                    <rect key="frame" x="64" y="374.5" width="247" height="36"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Proceed">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
@@ -93,6 +90,7 @@
                 <constraint firstItem="28k-Nj-mcu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EgP-Qe-XXX"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="G3N-pC-J1r"/>
                 <constraint firstItem="Qco-4k-CM2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="Nun-VN-5Nv"/>
+                <constraint firstItem="k8a-nx-IWb" firstAttribute="width" secondItem="Qco-4k-CM2" secondAttribute="width" id="Ro2-UV-bck"/>
                 <constraint firstItem="Qco-4k-CM2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VYG-VT-IcI"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="XFF-Bx-AMG"/>
                 <constraint firstItem="28k-Nj-mcu" firstAttribute="top" secondItem="k8a-nx-IWb" secondAttribute="bottom" constant="16" id="XFM-Yg-CA9"/>

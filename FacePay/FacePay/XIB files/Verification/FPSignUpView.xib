@@ -66,9 +66,6 @@
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-kb-rDP">
                     <rect key="frame" x="80" y="374.5" width="215" height="36"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="215" id="i2X-Dd-I3y"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Get started!">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
@@ -114,6 +111,7 @@
                 <constraint firstItem="jf6-R3-CiM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="lkT-eG-ncL"/>
                 <constraint firstItem="d6g-Kn-v6F" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="saC-Bl-a4m"/>
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="top" secondItem="jf6-R3-CiM" secondAttribute="bottom" constant="16" id="tuS-QY-QBv"/>
+                <constraint firstItem="Lza-kb-rDP" firstAttribute="width" secondItem="jf6-R3-CiM" secondAttribute="width" id="ywj-nr-ZgC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
