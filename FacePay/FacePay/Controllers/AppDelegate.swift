@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
         FPConstantsManager.sharedInstance.window = UIWindow(frame: UIScreen.main.bounds)
-        var window = FPConstantsManager.sharedInstance.window!
+        let window = FPConstantsManager.sharedInstance.window!
         
         var VC: UIViewController?
         
