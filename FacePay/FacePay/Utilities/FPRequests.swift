@@ -19,10 +19,11 @@ class FPRequests {
     func uploadImageToAWS(image: UIImage) {
         tempKeyName = String(arc4random()) + ".png"
         let uploadingFileURL = storeImage(image: image)
+        let bucket = "facepaydemobucket1234567890"
         
         let uploadRequest = AWSS3TransferManagerUploadRequest()
         
-        uploadRequest?.bucket = "facepaydemobucket1234567890"
+        uploadRequest?.bucket = bucket
         uploadRequest?.key = tempKeyName
         uploadRequest?.body = uploadingFileURL
         
@@ -43,7 +44,8 @@ class FPRequests {
                 return nil
             }
             
-            let uploadOutput = task.result
+            FPConstantsManager.sharedInstance.currentUpload = "https://s3.amazonaws.com/" + bucket + "/" + self.tempKeyName!
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "aws-upload-complete") , object: nil)
             print("Upload complete for: \(uploadRequest?.key ?? "")")
             return nil
         })

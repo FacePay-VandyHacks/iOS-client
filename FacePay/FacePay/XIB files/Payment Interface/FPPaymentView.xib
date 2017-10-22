@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="ytl-6q-P3b" id="zRv-at-YmC"/>
                 <outlet property="cameraCapture" destination="NYx-lt-SEe" id="oXN-8J-BrE"/>
+                <outlet property="handleField" destination="pWj-XS-rW3" id="yYi-zk-5jK"/>
                 <outlet property="nextButton" destination="vSi-3U-Hp9" id="DjB-9n-K5T"/>
                 <outlet property="previewView" destination="M1T-m1-Kgn" id="B6b-bd-Gla"/>
                 <outlet property="view" destination="iN0-l3-epB" id="CLX-lr-HxB"/>

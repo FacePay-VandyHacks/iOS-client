@@ -15,6 +15,7 @@ class FPConstantsManager {
     var accountSecret: String?
     var window: UIWindow?
     var userName: String?
+    var currentUpload: String?
     
 }
 
@@ -37,6 +38,7 @@ struct XIBFiles {
     static let PAYMENTVIEW = "FPPaymentView"
     static let HOMEVIEW = "FPHomeView"
     static let ACCOUNTVIEW = "FPAccountView"
+    static let AMOUNTCONFIRMATIONVIEW = "FPAmountConfirmationView"
     
     //SIGNUP/SIGNIN
     static let DISAMBIGUATIONVIEW = "FPDisambiguationView"
@@ -44,5 +46,21 @@ struct XIBFiles {
     static let SIGNINVIEW = "FPSignInView"
     static let SIGNUPPHOTOSVIEW = "FPSignUpPhotosView"
     
+}
+
+
+extension UIImage {
+    func correctlyOrientedImage() -> UIImage {
+        if self.imageOrientation == UIImageOrientation.up {
+            return self
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        let normalizedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!;
+        UIGraphicsEndImageContext();
+        
+        return normalizedImage;
+    }
 }
 

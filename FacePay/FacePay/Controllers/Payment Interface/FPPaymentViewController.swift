@@ -15,15 +15,22 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
+    var isUploading = false
     
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var cameraCapture: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var handleField: UITextField!
     
     override func viewDidLoad() {
         self.title = "Make a Transaction"
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(uploadComplete), name: NSNotification.Name(rawValue: "aws-upload-complete"), object: nil)
+        activityIndicator.hidesWhenStopped = true
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,11 +48,29 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         loadCamera()
     }
     
+    @objc func uploadComplete() {
+        if isUploading {
+            isUploading = false
+            let tempURL = FPConstantsManager.sharedInstance.currentUpload
+            FPConstantsManager.sharedInstance.currentUpload = nil
+            let VC = FPPaymentConfirmViewController(nibName: XIBFiles.AMOUNTCONFIRMATIONVIEW, bundle: nil)
+            VC.uploadURL = tempURL
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+    }
+    
     @IBAction func tappedNext() {
         
     }
     
     @IBAction func tappedCapture () {
+        cameraCapture.isEnabled = false
+        nextButton.isEnabled = false
+        handleField.isEnabled = false
+        previewView.alpha = 0.5
+        
+        activityIndicator.startAnimating()
+        
         // Make sure capturePhotoOutput is valid
         guard let capturePhotoOutput = self.capturePhotoOutput else { return }
         // Get an instance of AVCapturePhotoSettings class
@@ -109,14 +134,15 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
                 print("Error capturing photo: \(String(describing: error))")
                 return
         }
+        
         // Convert photo same buffer to a jpeg image data by using // AVCapturePhotoOutput
         guard let imageData =
             AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
                 return
         }
         // Initialise a UIImage with our image data
-        let capturedImage = UIImage.init(data: imageData , scale: 1.0)
-        
+        let capturedImage = UIImage.init(data: imageData , scale: 1.0)?.correctlyOrientedImage()
+        isUploading = true
         FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!)
     }
     

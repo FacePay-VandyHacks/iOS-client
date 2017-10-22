@@ -28,6 +28,7 @@
 		6DBF44111F9AFF7C00370EAF /* FPPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */; };
 		6DBF44141F9B009800370EAF /* FPPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */; };
 		6DBF44161F9B013600370EAF /* FPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44151F9B013600370EAF /* FPRequests.swift */; };
+		6DDC0F131F9C247000098ED5 /* FPPaymentConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */; };
 		76A9A9AB7361485E62C0FF1D /* Pods_FacePayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46212020E196888BAB0F8983 /* Pods_FacePayUITests.framework */; };
 		D6020AA5960E203333C218B8 /* Pods_FacePayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C4854FEA60F195E30A4092 /* Pods_FacePayTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPaymentView.xib; sourceTree = "<group>"; };
 		6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPaymentViewController.swift; sourceTree = "<group>"; };
 		6DBF44151F9B013600370EAF /* FPRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPRequests.swift; sourceTree = "<group>"; };
+		6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPaymentConfirmViewController.swift; sourceTree = "<group>"; };
 		B1BA414EF9147E3053858E81 /* Pods-FacePayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B238F47FB12500F1BC9FAF5C /* Pods-FacePayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayUITests/Pods-FacePayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CAF8C74E47C553F87DB62E5E /* Pods-FacePayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePayTests/Pods-FacePayTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */,
 				6DA559911F9BD55700DEF318 /* FPHomeViewController.swift */,
+				6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */,
 				6DA559951F9BD70100DEF318 /* FPAccountViewController.swift */,
 			);
 			path = "Payment Interface";
@@ -553,6 +556,7 @@
 				6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */,
 				6DBF440B1F9AF70E00370EAF /* FPSignInController.swift in Sources */,
 				6DA5598A1F9BBFA900DEF318 /* FPSignUpPhotosController.swift in Sources */,
+				6DDC0F131F9C247000098ED5 /* FPPaymentConfirmViewController.swift in Sources */,
 				6DBF440E1F9AF81700370EAF /* FPConstantsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
