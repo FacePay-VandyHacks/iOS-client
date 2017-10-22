@@ -1,5 +1,5 @@
 //
-//  FPVariablesManager.swift
+//  FPConstantsManager.swift
 //  FacePay
 //
 //  Created by Bruce Brookshire on 10/20/17.
@@ -51,7 +51,12 @@ struct XIBFiles {
     static let SIGNUPVIEW = "FPSignUpView"
     static let SIGNINVIEW = "FPSignInView"
     static let SIGNUPPHOTOSVIEW = "FPSignUpPhotosView"
-    
+}
+
+//Type of transaction to perform
+enum TRANSACTION {
+    case SEND
+    case REQUEST
 }
 
 //Fix to make an image rotate to the correct orientation before sending to FP API

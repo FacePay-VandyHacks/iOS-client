@@ -45,13 +45,12 @@ class FPRequests {
             }
             
             let fileurl = "https://s3.amazonaws.com/" + bucket + "/" + self.tempKeyName!
-            print(fileurl)
             completion(fileurl)
             return nil
         })
     }
     
-    //username, password
+    //Log in the user
     func logIn(_ username: String, _ password: String, _ completion: @escaping (Bool) -> Void) {
         let jsonDict: [String : String] = ["username" : username, "password" : password]
         
@@ -83,7 +82,7 @@ class FPRequests {
             }.resume()
     }
     
-    
+    //Sign up the user
     func signUp(username: String, password: String, firstName: String, lastName: String, city: String, email: String, _ completion: @escaping (Bool) -> Void) {
         let jsonDict: [String : String] = ["username" : username, "password" : password, "first_name" : firstName, "last_name" : lastName, "city" : city, "primary_email" : email]
         

@@ -16,11 +16,15 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
     
+    var username: String!
+    var password: String!
+    
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var cameraCapture: UIButton!
     
     override func viewDidLoad() {
+        self.title = "Almost done!"
         cameraCapture.layer.borderColor = Colors.FPGreen.cgColor
         cameraCapture.layer.borderWidth = 2
         cameraCapture.layer.cornerRadius = 5
@@ -35,6 +39,12 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
     }
     
     @IBAction func tappedCapture () {
+        cameraCapture.isEnabled = false
+        activityIndicator.isHidden = false
+        previewView.alpha = 0.5
+        
+        activityIndicator.startAnimating()
+        
         // Make sure capturePhotoOutput is valid
         guard let capturePhotoOutput = self.capturePhotoOutput else { return }
         // Get an instance of AVCapturePhotoSettings class

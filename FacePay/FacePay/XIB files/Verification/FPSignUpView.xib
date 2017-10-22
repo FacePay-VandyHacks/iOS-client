@@ -41,30 +41,33 @@
                     <rect key="frame" x="80" y="236.5" width="215" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="lwq-nx-st7"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-0O-Fm9">
                     <rect key="frame" x="80" y="282.5" width="215" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="MqA-oh-HeP"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (again)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-Kn-v6F">
                     <rect key="frame" x="80" y="328.5" width="215" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="wvo-KD-O5u"/>
+                    </connections>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error lbl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
-                    <rect key="frame" x="159" y="374.5" width="58.5" height="23.5"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
-                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-kb-rDP">
-                    <rect key="frame" x="97.5" y="402.5" width="180" height="36"/>
+                    <rect key="frame" x="80" y="374.5" width="215" height="36"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="180" id="i2X-Dd-I3y"/>
+                        <constraint firstAttribute="width" constant="215" id="i2X-Dd-I3y"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Get started!">
@@ -80,21 +83,31 @@
                         <constraint firstAttribute="width" secondItem="OFD-ub-k7Y" secondAttribute="height" multiplier="188:63" id="ZM8-eg-xs7"/>
                     </constraints>
                 </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad fad fs adsf adf asdf adsf ads fadsf adsf adfs ad fads fad fadf df " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
+                    <rect key="frame" x="24" y="426.5" width="328.5" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="mWp-eP-19B"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="jf6-R3-CiM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4yX-2C-ulR"/>
                 <constraint firstItem="Lza-kb-rDP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="61Z-xy-PZj"/>
-                <constraint firstItem="Lza-kb-rDP" firstAttribute="top" secondItem="d6g-Kn-v6F" secondAttribute="bottom" constant="44" id="6eX-JD-UVM"/>
+                <constraint firstItem="Lza-kb-rDP" firstAttribute="top" secondItem="d6g-Kn-v6F" secondAttribute="bottom" constant="16" id="6eX-JD-UVM"/>
                 <constraint firstItem="OFD-ub-k7Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="94" id="CeR-iV-506"/>
                 <constraint firstItem="RaO-YG-cT6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Kn9-6s-52i"/>
                 <constraint firstItem="d6g-Kn-v6F" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MEU-eM-O8b"/>
+                <constraint firstItem="RaO-YG-cT6" firstAttribute="top" secondItem="Lza-kb-rDP" secondAttribute="bottom" constant="16" id="Mag-tw-oQJ"/>
                 <constraint firstItem="tr5-IF-ugP" firstAttribute="top" secondItem="OFD-ub-k7Y" secondAttribute="bottom" constant="19.5" id="QeW-Sc-KiA"/>
                 <constraint firstItem="tr5-IF-ugP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="QiG-0x-jgZ"/>
                 <constraint firstItem="d6g-Kn-v6F" firstAttribute="width" secondItem="Mik-0O-Fm9" secondAttribute="width" id="RyP-jp-gwK"/>
                 <constraint firstItem="jf6-R3-CiM" firstAttribute="top" secondItem="tr5-IF-ugP" secondAttribute="bottom" constant="32" id="Ujh-8W-C6M"/>
+                <constraint firstItem="RaO-YG-cT6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="byJ-vI-U85"/>
                 <constraint firstItem="d6g-Kn-v6F" firstAttribute="top" secondItem="Mik-0O-Fm9" secondAttribute="bottom" constant="16" id="dZI-rU-dXS"/>
-                <constraint firstItem="RaO-YG-cT6" firstAttribute="top" secondItem="d6g-Kn-v6F" secondAttribute="bottom" constant="16" id="eji-eD-wTB"/>
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="width" secondItem="jf6-R3-CiM" secondAttribute="width" id="fyU-kN-2pB"/>
                 <constraint firstItem="OFD-ub-k7Y" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="j3s-XM-auh"/>
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kX2-Vc-dKR"/>
