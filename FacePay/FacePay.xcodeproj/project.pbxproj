@@ -196,10 +196,10 @@
 		6DBF440C1F9AF7F400370EAF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6DBF440D1F9AF81700370EAF /* FPConstantsManager.swift */,
-				6DBF44151F9B013600370EAF /* FPRequests.swift */,
 				6DDC0F161F9C7F9600098ED5 /* FPNavigationController.swift */,
 				6DDC0F141F9C59B400098ED5 /* FPJSONModels.swift */,
+				6DBF440D1F9AF81700370EAF /* FPConstantsManager.swift */,
+				6DBF44151F9B013600370EAF /* FPRequests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";

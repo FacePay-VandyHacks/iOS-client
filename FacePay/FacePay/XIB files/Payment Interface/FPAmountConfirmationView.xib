@@ -11,11 +11,16 @@
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPPaymentConfirmViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="AzP-qF-Fa7" id="qrL-HO-BJG"/>
+                <outlet property="amountField" destination="YFC-zW-Szp" id="CNV-FM-mgw"/>
+                <outlet property="confirmButton" destination="5Sw-bt-Q1o" id="veM-ml-X3A"/>
+                <outlet property="errorLabel" destination="qSw-oZ-TKk" id="HTc-e0-fUf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fi9-Ua-RC3"/>
             </connections>
         </placeholder>
@@ -24,28 +29,41 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2D-QH-W8j">
-                    <rect key="frame" x="122.5" y="200" width="130" height="23.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2D-QH-W8j">
+                    <rect key="frame" x="138.5" y="196" width="98.5" height="24"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <color key="textColor" red="0.29803921570000003" green="0.5450980392" blue="0.74901960779999999" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFC-zW-Szp">
-                    <rect key="frame" x="100" y="267.5" width="175" height="30"/>
+                    <rect key="frame" x="100" y="263.5" width="175" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sw-bt-Q1o">
-                    <rect key="frame" x="98" y="329.5" width="180" height="33"/>
+                    <rect key="frame" x="98" y="325.5" width="180" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="1Ie-bg-wHC"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Confirm">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
+                    <connections>
+                        <action selector="sendTransaction" destination="-1" eventType="touchUpInside" id="vJE-UE-ihG"/>
+                    </connections>
                 </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSw-oZ-TKk">
+                    <rect key="frame" x="76" y="377.5" width="224" height="24"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AzP-qF-Fa7">
+                    <rect key="frame" x="169" y="223" width="37" height="37"/>
+                    <color key="color" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -53,8 +71,14 @@
                 <constraint firstItem="YFC-zW-Szp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="HWp-1u-Of5"/>
                 <constraint firstItem="YFC-zW-Szp" firstAttribute="top" secondItem="w2D-QH-W8j" secondAttribute="bottom" constant="44" id="IKe-Sp-ejn"/>
                 <constraint firstItem="YFC-zW-Szp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="100" id="JQy-UQ-lkK"/>
+                <constraint firstItem="YFC-zW-Szp" firstAttribute="top" secondItem="AzP-qF-Fa7" secondAttribute="bottom" constant="3.5" id="Qbs-Bd-M3x"/>
+                <constraint firstItem="AzP-qF-Fa7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Toh-M9-Gsa"/>
                 <constraint firstItem="5Sw-bt-Q1o" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="X56-9B-A4M"/>
-                <constraint firstItem="w2D-QH-W8j" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="180" id="Z0Z-rE-ZcE"/>
+                <constraint firstItem="qSw-oZ-TKk" firstAttribute="top" secondItem="5Sw-bt-Q1o" secondAttribute="bottom" constant="16" id="XEa-gI-PTl"/>
+                <constraint firstItem="5Sw-bt-Q1o" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Y0f-VW-Vh0"/>
+                <constraint firstItem="AzP-qF-Fa7" firstAttribute="top" secondItem="w2D-QH-W8j" secondAttribute="bottom" constant="3" id="Y8e-xk-dxU"/>
+                <constraint firstItem="qSw-oZ-TKk" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="bZ1-XK-dF3"/>
+                <constraint firstItem="qSw-oZ-TKk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="76" id="inH-Rg-SBU"/>
                 <constraint firstItem="w2D-QH-W8j" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="z1v-2l-Fin"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

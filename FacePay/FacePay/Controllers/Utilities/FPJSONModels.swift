@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-//username:       newUser.username,
-//primary_email:  newUser.primary_email,
-//account_id:     newUser.account_id,
-//balance:        personalBalance
+
 struct UserSignUp : Decodable {
     let username: String
     let primary_email: String
@@ -27,7 +24,12 @@ struct UserLogIn : Decodable {
     let balance: Double
 }
 
+struct Balance : Decodable {
+    let balance: Double
+}
+
 struct CurrentUser {
     let accountID: String
     let balance: Double
 }
+

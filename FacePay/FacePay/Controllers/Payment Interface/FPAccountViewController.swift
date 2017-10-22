@@ -16,13 +16,21 @@ class FPAccountViewController : UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!
     
     override func viewDidLoad() {
-        balanceLabel.text = "$1,000.00"
+        
         
         self.title = "Preferences"
         
         logoutBtn.layer.borderColor = UIColor.red.cgColor
         logoutBtn.layer.borderWidth = 2
         logoutBtn.layer.cornerRadius = 5
+        
+        guard let balance = FPVariablesManager.sharedInstance.currentUser?.balance else {
+            balanceLabel.text = ""
+            return
+        }
+        
+        let balanceString = String(format: "$%f0.2", balance)
+        balanceLabel.text = balanceString
     }
     
     

@@ -43,7 +43,9 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     }
     
     @IBAction func tappedNext() {
-        
+        let VC = FPPaymentConfirmViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
+        VC.handle = handleField.text
+        self.navigationController?.pushViewController(VC, animated: true)
     }
     
     @IBAction func tappedCapture () {
@@ -127,6 +129,11 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)?.correctlyOrientedImage()
         
         FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
+            DispatchQueue.main.async(execute: {
+                let VC = FPPaymentConfirmViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
+                VC.uploadURL = fileUrl
+                self.navigationController?.pushViewController(VC, animated: true)
+            })
             print(fileUrl)
         })
     }

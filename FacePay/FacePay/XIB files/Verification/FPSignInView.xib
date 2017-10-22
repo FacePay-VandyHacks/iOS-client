@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-4k-CM2">
-                    <rect key="frame" x="64" y="282.5" width="247" height="30"/>
+                    <rect key="frame" x="76" y="282.5" width="223" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -50,7 +50,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-nx-IWb">
-                    <rect key="frame" x="64" y="374.5" width="247" height="36"/>
+                    <rect key="frame" x="76" y="374.5" width="223" height="36"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Proceed">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
@@ -60,7 +60,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE1-xO-Ae6">
-                    <rect key="frame" x="64" y="328.5" width="247" height="30"/>
+                    <rect key="frame" x="76" y="328.5" width="223" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -89,7 +89,7 @@
                 <constraint firstItem="vGy-12-FI8" firstAttribute="top" secondItem="aSA-1z-0Ts" secondAttribute="bottom" constant="32" id="Dw1-c0-srh"/>
                 <constraint firstItem="28k-Nj-mcu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EgP-Qe-XXX"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="G3N-pC-J1r"/>
-                <constraint firstItem="Qco-4k-CM2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="Nun-VN-5Nv"/>
+                <constraint firstItem="Qco-4k-CM2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="76" id="Nun-VN-5Nv"/>
                 <constraint firstItem="k8a-nx-IWb" firstAttribute="width" secondItem="Qco-4k-CM2" secondAttribute="width" id="Ro2-UV-bck"/>
                 <constraint firstItem="Qco-4k-CM2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VYG-VT-IcI"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="XFF-Bx-AMG"/>

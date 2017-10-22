@@ -50,6 +50,93 @@ class FPRequests {
         })
     }
     
+    func sendRequestHandle(_ handle: String, _ completion: @escaping (Bool) -> Void) {
+        let accountID = (FPVariablesManager.sharedInstance.currentUser?.accountID)!
+        
+        let jsonDict: [String:String] = ["handle" : handle, "accountID" : accountID]
+        let request = buildRequest(jsonDict: jsonDict)!
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            print(error)
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let user = try JSONDecoder().decode(Balance.self, from: data)
+                    
+                    let currentUser = CurrentUser(accountID: accountID, balance: user.balance)
+                    FPVariablesManager.sharedInstance.currentUser = currentUser
+                    
+                    completion(true)
+                } catch {
+                    print(error)
+                }
+                completion(false)
+            }
+            }.resume()
+    }
+    
+    func sendRequest(_ fileURL: String, _ completion: @escaping (Bool) -> Void) {
+        let accountID = (FPVariablesManager.sharedInstance.currentUser?.accountID)!
+        
+        let jsonDict: [String:String] = ["fileURL" : fileURL, "accountID" : accountID]
+        let request = buildRequest(jsonDict: jsonDict)!
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            print(error)
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let user = try JSONDecoder().decode(Balance.self, from: data)
+                    
+                    let currentUser = CurrentUser(accountID: accountID, balance: user.balance)
+                    FPVariablesManager.sharedInstance.currentUser = currentUser
+                    
+                    completion(true)
+                } catch {
+                    print(error)
+                }
+                completion(false)
+            }
+            }.resume()
+    }
+    
+    func getBalance(_ completion: @escaping (Bool) -> Void) {
+        let accountID = (FPVariablesManager.sharedInstance.currentUser?.accountID)!
+        
+        let jsonDict: [String:String] = ["accountID" : accountID]
+        let request = buildRequest(jsonDict: jsonDict)!
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            print(error)
+            if let response = response {
+                print(response)
+            }
+            
+            if let data = data {
+                do {
+                    let user = try JSONDecoder().decode(Balance.self, from: data)
+                    
+                    let currentUser = CurrentUser(accountID: accountID, balance: user.balance)
+                    FPVariablesManager.sharedInstance.currentUser = currentUser
+                    
+                    completion(true)
+                } catch {
+                    print(error)
+                }
+                completion(false)
+            }
+            }.resume()
+    }
+    
     //Log in the user
     func logIn(_ username: String, _ password: String, _ completion: @escaping (Bool) -> Void) {
         let jsonDict: [String : String] = ["username" : username, "password" : password]
@@ -116,7 +203,7 @@ class FPRequests {
             }.resume()
     }
     
-    private func buildRequest(jsonDict: [String: Any]) -> URLRequest? {
+    private func buildRequest(jsonDict: [String: String]) -> URLRequest? {
         guard let url = URL(string: "http://10.66.182.232:8080/v1/session") else { return nil }
         
         var request = URLRequest(url: url)

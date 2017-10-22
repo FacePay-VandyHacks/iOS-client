@@ -38,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jf6-R3-CiM">
-                    <rect key="frame" x="80" y="236.5" width="215" height="30"/>
+                    <rect key="frame" x="76" y="236.5" width="223" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -47,7 +47,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mik-0O-Fm9">
-                    <rect key="frame" x="80" y="282.5" width="215" height="30"/>
+                    <rect key="frame" x="76" y="282.5" width="223" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -56,7 +56,7 @@
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password (again)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-Kn-v6F">
-                    <rect key="frame" x="80" y="328.5" width="215" height="30"/>
+                    <rect key="frame" x="76" y="328.5" width="223" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -65,7 +65,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lza-kb-rDP">
-                    <rect key="frame" x="80" y="374.5" width="215" height="36"/>
+                    <rect key="frame" x="76" y="374.5" width="223" height="36"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                     <state key="normal" title="Get started!">
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
@@ -108,7 +108,7 @@
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="width" secondItem="jf6-R3-CiM" secondAttribute="width" id="fyU-kN-2pB"/>
                 <constraint firstItem="OFD-ub-k7Y" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="j3s-XM-auh"/>
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="kX2-Vc-dKR"/>
-                <constraint firstItem="jf6-R3-CiM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="lkT-eG-ncL"/>
+                <constraint firstItem="jf6-R3-CiM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="76" id="lkT-eG-ncL"/>
                 <constraint firstItem="d6g-Kn-v6F" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="saC-Bl-a4m"/>
                 <constraint firstItem="Mik-0O-Fm9" firstAttribute="top" secondItem="jf6-R3-CiM" secondAttribute="bottom" constant="16" id="tuS-QY-QBv"/>
                 <constraint firstItem="Lza-kb-rDP" firstAttribute="width" secondItem="jf6-R3-CiM" secondAttribute="width" id="ywj-nr-ZgC"/>
