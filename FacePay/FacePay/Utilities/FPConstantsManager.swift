@@ -54,20 +54,7 @@ struct XIBFiles {
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Fix to make an image rotate to the correct orientation before sending to FP API
 extension UIImage {
     func correctlyOrientedImage() -> UIImage {
         if self.imageOrientation == UIImageOrientation.up {
