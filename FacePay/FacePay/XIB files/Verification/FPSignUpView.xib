@@ -83,7 +83,7 @@
                         <constraint firstAttribute="width" secondItem="OFD-ub-k7Y" secondAttribute="height" multiplier="188:63" id="ZM8-eg-xs7"/>
                     </constraints>
                 </imageView>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad fad fs adsf adf asdf adsf ads fadsf adsf adfs ad fads fad fadf df " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should not see this faux error message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-YG-cT6">
                     <rect key="frame" x="24" y="426.5" width="328.5" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="mWp-eP-19B"/>
