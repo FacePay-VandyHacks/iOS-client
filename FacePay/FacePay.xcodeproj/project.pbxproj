@@ -142,10 +142,10 @@
 		6D00E0C61F9AEB4B002C8F7D /* FacePay */ = {
 			isa = PBXGroup;
 			children = (
+				6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */,
 				6D00E0CE1F9AEB4B002C8F7D /* Assets.xcassets */,
 				6D00E0F81F9AEC75002C8F7D /* Controllers */,
 				6D00E0F71F9AEC70002C8F7D /* XIB files */,
-				6DBF440C1F9AF7F400370EAF /* Utilities */,
 				6D00E0D31F9AEB4B002C8F7D /* Info.plist */,
 			);
 			path = FacePay;
@@ -164,9 +164,9 @@
 		6D00E0F81F9AEC75002C8F7D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6D00E0C71F9AEB4B002C8F7D /* AppDelegate.swift */,
 				6DBF44121F9AFF8D00370EAF /* Payment Interface */,
 				6DBF44071F9AF6E700370EAF /* Verification */,
+				6DBF440C1F9AF7F400370EAF /* Utilities */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
