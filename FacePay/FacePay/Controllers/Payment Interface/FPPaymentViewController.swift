@@ -15,7 +15,6 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
-    var isUploading = false
     
     @IBOutlet weak var previewView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -25,12 +24,7 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
     
     override func viewDidLoad() {
         self.title = "Make a Transaction"
-        NotificationCenter.default.addObserver(self, selector: #selector(uploadComplete), name: NSNotification.Name(rawValue: "aws-upload-complete"), object: nil)
         activityIndicator.hidesWhenStopped = true
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,17 +40,6 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         previewView.layer.cornerRadius = previewView.frame.width/2
         
         loadCamera()
-    }
-    
-    @objc func uploadComplete() {
-        if isUploading {
-            isUploading = false
-            let tempURL = FPVariablesManager.sharedInstance.currentUpload
-            FPVariablesManager.sharedInstance.currentUpload = nil
-            let VC = FPPaymentConfirmViewController(nibName: XIBFiles.AMOUNTCONFIRMATIONVIEW, bundle: nil)
-            VC.uploadURL = tempURL
-            self.navigationController?.pushViewController(VC, animated: true)
-        }
     }
     
     @IBAction func tappedNext() {
@@ -142,8 +125,10 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         }
         // Initialise a UIImage with our image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)?.correctlyOrientedImage()
-        isUploading = true
-        FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!)
+        
+        FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
+            print(fileUrl)
+        })
     }
     
     // Find a camera with the specified AVCaptureDevicePosition, returning nil if one is not found

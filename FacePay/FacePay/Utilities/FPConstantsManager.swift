@@ -13,10 +13,10 @@ import UIKit
 class FPVariablesManager {
     static let sharedInstance = FPVariablesManager()
     
-    var accountSecret: String?
+    var currentUser: CurrentUser?
+    
     var window: UIWindow?
     var userName: String?
-    var currentUpload: String?
     
 }
 

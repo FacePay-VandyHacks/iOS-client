@@ -29,16 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = UserDefaults.standard
         
         if let accountKey = defaults.object(forKey: DefaultsKeys.accountSecret) as? String{
-            FPVariablesManager.sharedInstance.accountSecret = accountKey
+            let currentUser = CurrentUser(accountID: accountKey, balance: 0.0)
             VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
         } else {
             VC = FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil)
         }
         
-        let navController = UINavigationController(rootViewController: VC!)
-        navController.navigationBar.tintColor = Colors.FPGreen
-        navController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: Colors.FPBlue]
-        navController.navigationBar.barTintColor = UIColor.white
+        let navController = FPNavigationController(rootViewController: VC!)
         
         window.rootViewController = navController
         window.makeKeyAndVisible()

@@ -103,7 +103,11 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
                 return
         }
         // Initialise a UIImage with our image data
-        let capturedImage = UIImage.init(data: imageData , scale: 1.0)
+        let capturedImage = UIImage.init(data: imageData , scale: 1.0)?.correctlyOrientedImage()
+        
+        FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
+            print(fileUrl)
+        })
     }
     
     // Find a camera with the specified AVCaptureDevicePosition, returning nil if one is not found

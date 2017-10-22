@@ -13,11 +13,13 @@
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
+            <string>AvenirNext-UltraLight</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPSignInController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="errorLbl" destination="28k-Nj-mcu" id="Ejj-ej-Axx"/>
                 <outlet property="pswdField" destination="DE1-xO-Ae6" id="h8T-rQ-CEh"/>
                 <outlet property="signInBtn" destination="k8a-nx-IWb" id="HdB-W8-3Lo"/>
                 <outlet property="usernameField" destination="Qco-4k-CM2" id="H6Z-O3-6Yr"/>
@@ -30,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign in with your Username and Password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGy-12-FI8">
-                    <rect key="frame" x="80" y="187" width="215" height="56"/>
+                    <rect key="frame" x="80" y="191" width="215" height="56"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="AW3-vV-JLS"/>
                     </constraints>
@@ -39,13 +41,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qco-4k-CM2">
-                    <rect key="frame" x="64" y="274.5" width="247" height="30"/>
+                    <rect key="frame" x="64" y="278.5" width="247" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3Xd-Yq-Hgf"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-nx-IWb">
-                    <rect key="frame" x="97.5" y="390.5" width="180" height="36"/>
+                    <rect key="frame" x="97.5" y="398.5" width="180" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="5Vr-kc-WnD"/>
                     </constraints>
@@ -61,20 +66,32 @@
                     <rect key="frame" x="64" y="328.5" width="247" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7s7-RN-anF"/>
+                    </connections>
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Name and Logo" translatesAutoresizingMaskIntoConstraints="NO" id="aSA-1z-0Ts">
-                    <rect key="frame" x="93" y="92" width="188" height="63"/>
+                    <rect key="frame" x="93" y="96" width="188" height="63"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="aSA-1z-0Ts" secondAttribute="height" multiplier="188:63" id="8yI-cy-NRn"/>
                     </constraints>
                 </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in failed. Try again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28k-Nj-mcu">
+                    <rect key="frame" x="104" y="366.5" width="167" height="24"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="DE1-xO-Ae6" firstAttribute="top" secondItem="Qco-4k-CM2" secondAttribute="bottom" constant="24" id="2Uk-DW-Tw9"/>
+                <constraint firstItem="DE1-xO-Ae6" firstAttribute="top" secondItem="Qco-4k-CM2" secondAttribute="bottom" constant="20" id="2Uk-DW-Tw9"/>
                 <constraint firstItem="aSA-1z-0Ts" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4Wq-0j-8AB"/>
+                <constraint firstItem="28k-Nj-mcu" firstAttribute="top" secondItem="DE1-xO-Ae6" secondAttribute="bottom" constant="8" id="9GI-aS-dXY"/>
+                <constraint firstItem="k8a-nx-IWb" firstAttribute="top" secondItem="28k-Nj-mcu" secondAttribute="bottom" constant="8" id="Bxn-d9-Lj2"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="top" secondItem="aSA-1z-0Ts" secondAttribute="bottom" constant="32" id="Dw1-c0-srh"/>
+                <constraint firstItem="28k-Nj-mcu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="EgP-Qe-XXX"/>
                 <constraint firstItem="vGy-12-FI8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="G3N-pC-J1r"/>
                 <constraint firstItem="Qco-4k-CM2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="Nun-VN-5Nv"/>
                 <constraint firstItem="Qco-4k-CM2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="VYG-VT-IcI"/>
@@ -84,7 +101,6 @@
                 <constraint firstItem="aSA-1z-0Ts" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="93" id="eRt-Tr-ud0"/>
                 <constraint firstItem="DE1-xO-Ae6" firstAttribute="width" secondItem="Qco-4k-CM2" secondAttribute="width" id="lZH-oA-94I"/>
                 <constraint firstItem="k8a-nx-IWb" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="p3Z-4n-afc"/>
-                <constraint firstItem="k8a-nx-IWb" firstAttribute="top" secondItem="DE1-xO-Ae6" secondAttribute="bottom" constant="32" id="xHG-w6-nym"/>
                 <constraint firstItem="DE1-xO-Ae6" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="z5Z-p5-9R0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

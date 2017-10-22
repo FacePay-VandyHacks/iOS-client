@@ -33,7 +33,7 @@ class FPAccountViewController : UIViewController {
         defaults.removeObject(forKey: DefaultsKeys.accountSecret)
         defaults.synchronize()
         
-        FPVariablesManager.sharedInstance.window?.rootViewController = UINavigationController(rootViewController: FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil))
+        FPVariablesManager.sharedInstance.window?.rootViewController = FPNavigationController(rootViewController: FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil))
         FPVariablesManager.sharedInstance.window?.makeKeyAndVisible()
         
     }
