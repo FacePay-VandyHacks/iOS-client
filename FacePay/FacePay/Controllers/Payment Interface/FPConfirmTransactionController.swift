@@ -28,13 +28,13 @@ class FPConfirmTransactionController : UIViewController {
     @IBAction func tappedConfirm() {
         
         FPRequests.sharedInstance.sendRequest(username, Double(amount)!) { (success) in
-            DispatchQueue.main.async(execute: {
-                let window = FPVariablesManager.sharedInstance.window
-                let VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
-                let navController = FPNavigationController(rootViewController: VC)
-                window?.rootViewController = navController
-                window?.makeKeyAndVisible()
-            })
+//            DispatchQueue.main.async(execute: {
+//                let window = FPVariablesManager.sharedInstance.window
+//                let VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
+//                let navController = FPNavigationController(rootViewController: VC)
+//                window?.rootViewController = navController
+//                window?.makeKeyAndVisible()
+//            })
         }
     }
     

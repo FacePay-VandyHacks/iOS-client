@@ -118,7 +118,7 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
         FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
             FPRequests.sharedInstance.enrollKairosImage(fileUrl, self.username) { (success) in
                 if success {
-                    FPRequests.sharedInstance.signUp(username: self.username, password: self.password, firstName: "Bruce", lastName: "brookshire", city: "Tyler", email: "flyrboy96@gmail.com", { (success) in
+                    FPRequests.sharedInstance.signUp(username: self.username, password: self.password, firstName: "Bruce", lastName: "brookshire", city: "Tyler", email: (String(arc4random()) + "@gmail.com"), { (success) in
                         if success {
                             DispatchQueue.main.async(execute: {
                                 let window = FPVariablesManager.sharedInstance.window
