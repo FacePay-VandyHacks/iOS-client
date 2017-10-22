@@ -130,7 +130,7 @@ class FPPaymentViewController:  UIViewController, AVCapturePhotoCaptureDelegate 
         
         FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
             DispatchQueue.main.async(execute: {
-                let VC = FPPaymentConfirmViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
+                let VC = FPPaymentConfirmViewController(nibName: XIBFiles.AMOUNTCONFIRMATIONVIEW, bundle: nil)
                 VC.uploadURL = fileUrl
                 self.navigationController?.pushViewController(VC, animated: true)
             })

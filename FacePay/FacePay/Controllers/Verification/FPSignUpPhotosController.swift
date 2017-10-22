@@ -116,23 +116,26 @@ class FPSignUpPhotosController : UIViewController, AVCapturePhotoCaptureDelegate
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)?.correctlyOrientedImage()
         
         FPRequests.sharedInstance.uploadImageToAWS(image: capturedImage!, { (fileUrl) in
-            FPRequests.sharedInstance.signUp(username: self.username, password: self.password, firstName: String(arc4random()), lastName: String(arc4random()), city: String(arc4random()), email: String(arc4random()), { (success) in
+            FPRequests.sharedInstance.enrollKairosImage(fileUrl, self.username) { (success) in
                 if success {
-                    print(fileUrl)
-                    DispatchQueue.main.async(execute: {
-                        let window = FPVariablesManager.sharedInstance.window
-                        let VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
-                        let navController = FPNavigationController(rootViewController: VC)
-                        window?.rootViewController = navController
-                        window?.makeKeyAndVisible()
-                    })
-                } else {
-                    DispatchQueue.main.async(execute: {
-                        let errorAlert = UIAlertController(title: "Oops", message: "Something went wrong :(", preferredStyle: .alert)
-                        self.navigationController?.present(errorAlert, animated: true, completion: nil)
+                    FPRequests.sharedInstance.signUp(username: self.username, password: self.password, firstName: "Bruce", lastName: "brookshire", city: "Tyler", email: "flyrboy96@gmail.com", { (success) in
+                        if success {
+                            DispatchQueue.main.async(execute: {
+                                let window = FPVariablesManager.sharedInstance.window
+                                let VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
+                                let navController = FPNavigationController(rootViewController: VC)
+                                window?.rootViewController = navController
+                                window?.makeKeyAndVisible()
+                            })
+                        } else {
+                            DispatchQueue.main.async(execute: {
+                                let errorAlert = UIAlertController(title: "Oops", message: "Something went wrong :(", preferredStyle: .alert)
+                                self.navigationController?.present(errorAlert, animated: true, completion: nil)
+                            })
+                        }
                     })
                 }
-            })
+            }
         })
     }
     

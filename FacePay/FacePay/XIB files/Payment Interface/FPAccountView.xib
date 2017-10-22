@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPAccountViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="nuA-ax-Eow" id="BPR-rY-pYK"/>
                 <outlet property="balanceLabel" destination="sSb-DW-uqB" id="zwj-Sn-QCH"/>
                 <outlet property="logoutBtn" destination="Vcu-cq-ZbB" id="sxk-fd-SAd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="G3O-BU-wLZ"/>
@@ -51,6 +52,10 @@
                         <action selector="logout" destination="-1" eventType="touchUpInside" id="H2s-nA-f5z"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nuA-ax-Eow">
+                    <rect key="frame" x="169" y="325" width="37" height="37"/>
+                    <color key="color" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -58,6 +63,8 @@
                 <constraint firstItem="H35-kD-KtP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="KYN-Cf-Zl9"/>
                 <constraint firstItem="sSb-DW-uqB" firstAttribute="top" secondItem="H35-kD-KtP" secondAttribute="bottom" constant="32" id="d4q-Nj-LZC"/>
                 <constraint firstItem="sSb-DW-uqB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hG4-x6-BRs"/>
+                <constraint firstItem="nuA-ax-Eow" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="jAo-f0-Lsi"/>
+                <constraint firstItem="nuA-ax-Eow" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="mMF-c8-fxM"/>
                 <constraint firstItem="Vcu-cq-ZbB" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mga-bV-5Lh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vcu-cq-ZbB" secondAttribute="bottom" constant="120" id="yfW-A9-HPy"/>
             </constraints>

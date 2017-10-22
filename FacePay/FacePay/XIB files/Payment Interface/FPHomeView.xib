@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FPHomeViewController" customModule="FacePay" customModuleProvider="target">
             <connections>
-                <outlet property="accountBtn" destination="T22-7b-GVV" id="7qY-VT-h6c"/>
+                <outlet property="accountBtn" destination="T22-7b-GVV" id="vVY-Xn-YKI"/>
                 <outlet property="transactionBtn" destination="fWJ-Iw-TLK" id="xkQ-KK-K2u"/>
                 <outlet property="view" destination="iN0-l3-epB" id="P76-jg-BtL"/>
             </connections>
@@ -33,7 +33,7 @@
                         <color key="titleColor" red="0.18039215689999999" green="0.84705882349999995" blue="0.5450980392" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                     <connections>
-                        <action selector="tappedAccount" destination="-1" eventType="touchUpInside" id="RyW-zI-s92"/>
+                        <action selector="tappedAccount" destination="-1" eventType="touchUpInside" id="3H3-6C-vys"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-Iw-TLK">

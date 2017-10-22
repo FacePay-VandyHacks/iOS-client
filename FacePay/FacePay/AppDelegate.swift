@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let accountKey = defaults.object(forKey: DefaultsKeys.accountSecret) as? String{
             let currentUser = CurrentUser(accountID: accountKey, balance: 0.0)
+            FPVariablesManager.sharedInstance.currentUser = currentUser
             VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
         } else {
             VC = FPDisambiguationController(nibName: XIBFiles.DISAMBIGUATIONVIEW, bundle: nil)

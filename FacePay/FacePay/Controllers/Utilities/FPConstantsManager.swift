@@ -53,10 +53,10 @@ struct XIBFiles {
     static let SIGNUPPHOTOSVIEW = "FPSignUpPhotosView"
 }
 
-//Type of transaction to perform
-enum TRANSACTION {
-    case SEND
-    case REQUEST
+//API keys for Kairos
+struct KairosAPI {
+    static let AppID = "0576e4d2"
+    static let AppKey = "7a6536f9999c8571429e4819dd7b7732"
 }
 
 //Fix to make an image rotate to the correct orientation before sending to FP API

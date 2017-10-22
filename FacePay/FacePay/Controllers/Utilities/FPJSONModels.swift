@@ -33,3 +33,7 @@ struct CurrentUser {
     let balance: Double
 }
 
+struct KairosRecognized {
+    let confidence: Double
+    let subject_id: String
+}
