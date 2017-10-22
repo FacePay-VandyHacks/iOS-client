@@ -45,6 +45,7 @@ struct XIBFiles {
     static let HOMEVIEW = "FPHomeView"
     static let ACCOUNTVIEW = "FPAccountView"
     static let AMOUNTCONFIRMATIONVIEW = "FPAmountConfirmationView"
+    static let TRANSACTIONCONFIRMATIONVIEW = "FPConfirmTransactionView"
     
     //SIGNUP/SIGNIN
     static let DISAMBIGUATIONVIEW = "FPDisambiguationView"

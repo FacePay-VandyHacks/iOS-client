@@ -38,18 +38,14 @@ class FPPaymentConfirmViewController : UIViewController, UITextFieldDelegate {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             FPRequests.sharedInstance.checkKairosUser(uploadURL!) { (result) in
-                if result != nil {
-                    FPRequests.sharedInstance.sendRequest(self.uploadURL!, Double(amount)!) { (success) in
-                        if success {
-                            DispatchQueue.main.async(execute: {
-                                let window = FPVariablesManager.sharedInstance.window
-                                let VC = FPHomeViewController(nibName: XIBFiles.HOMEVIEW, bundle: nil)
-                                let navController = FPNavigationController(rootViewController: VC)
-                                window?.rootViewController = navController
-                                window?.makeKeyAndVisible()
-                            })
-                        }
-                    }
+                if result != nil{
+                    DispatchQueue.main.async(execute: {
+                        let VC = FPConfirmTransactionController(nibName: XIBFiles.TRANSACTIONCONFIRMATIONVIEW, bundle: nil)
+                        VC.amount = amount
+                        VC.username = result?.subject_id
+                        self.navigationController?.pushViewController(VC, animated: true)
+                        
+                    })
                 }
             }
         } else if handle != nil {

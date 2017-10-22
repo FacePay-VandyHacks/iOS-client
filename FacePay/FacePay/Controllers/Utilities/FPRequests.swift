@@ -82,39 +82,39 @@ class FPRequests {
     }
     
     //Pays the user captured at the fileURL the amount specified
-    func sendRequest(_ fileURL: String,_ amount: Double,_ completion: @escaping (Bool) -> Void) {
+    func sendRequest(_ username: String,_ amount: Double,_ completion: @escaping (Bool) -> Void) {
         let accountID = (FPVariablesManager.sharedInstance.currentUser?.accountID)!
-//
-//        let jsonDict: [String:String] = ["fileURL" : fileURL, "accountID" : accountID]
-//        guard let url = URL(string: "http://10.66.182.232:8080/v1/paymentHandle") else { return nil }
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        guard let httpBody = try? JSONSerialization.data(withJSONObject: jsonDict, options: []) else { return nil }
-//        request.httpBody = httpBody
-//
-//        let session = URLSession.shared
-//        session.dataTask(with: request) { (data, response, error) in
-//            print(error)
-//            if let response = response {
-//                print(response)
-//            }
-//
-//            if let data = data {
-//                do {
-//                    let user = try JSONDecoder().decode(Balance.self, from: data)
-//
-//                    let currentUser = CurrentUser(accountID: accountID, balance: user.balance)
-//                    FPVariablesManager.sharedInstance.currentUser = currentUser
-//
-//                    completion(true)
-//                } catch {
-//                    print(error)
-//                }
-//                completion(false)
-//            }
-//            }.resume()
+
+        let jsonDict: [String:String] = ["username" : username, "account_id" : accountID]
+        guard let url = URL(string: "http://10.66.182.232:8080/v1/paymentHandle") else { return }
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: jsonDict, options: []) else { return}
+        request.httpBody = httpBody
+
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            print(error)
+            if let response = response {
+                print(response)
+            }
+
+            if let data = data {
+                do {
+                    let user = try JSONDecoder().decode(Balance.self, from: data)
+
+                    let currentUser = CurrentUser(accountID: accountID, balance: user.balance)
+                    FPVariablesManager.sharedInstance.currentUser = currentUser
+
+                    completion(true)
+                } catch {
+                    print(error)
+                }
+                completion(false)
+            }
+            }.resume()
     }
     
     //Gets the balance of the current user

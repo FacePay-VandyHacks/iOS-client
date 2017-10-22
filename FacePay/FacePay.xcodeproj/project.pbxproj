@@ -28,6 +28,8 @@
 		6DBF44111F9AFF7C00370EAF /* FPPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */; };
 		6DBF44141F9B009800370EAF /* FPPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */; };
 		6DBF44161F9B013600370EAF /* FPRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF44151F9B013600370EAF /* FPRequests.swift */; };
+		6DD77E1C1F9CDE05006926AF /* FPConfirmTransactionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD77E1B1F9CDE05006926AF /* FPConfirmTransactionView.xib */; };
+		6DD77E1E1F9CDE1E006926AF /* FPConfirmTransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD77E1D1F9CDE1E006926AF /* FPConfirmTransactionController.swift */; };
 		6DDC0F131F9C247000098ED5 /* FPPaymentConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */; };
 		6DDC0F151F9C59B400098ED5 /* FPJSONModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0F141F9C59B400098ED5 /* FPJSONModels.swift */; };
 		6DDC0F171F9C7F9600098ED5 /* FPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC0F161F9C7F9600098ED5 /* FPNavigationController.swift */; };
@@ -83,6 +85,8 @@
 		6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPPaymentView.xib; sourceTree = "<group>"; };
 		6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPaymentViewController.swift; sourceTree = "<group>"; };
 		6DBF44151F9B013600370EAF /* FPRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPRequests.swift; sourceTree = "<group>"; };
+		6DD77E1B1F9CDE05006926AF /* FPConfirmTransactionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FPConfirmTransactionView.xib; sourceTree = "<group>"; };
+		6DD77E1D1F9CDE1E006926AF /* FPConfirmTransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPConfirmTransactionController.swift; sourceTree = "<group>"; };
 		6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPPaymentConfirmViewController.swift; sourceTree = "<group>"; };
 		6DDC0F141F9C59B400098ED5 /* FPJSONModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPJSONModels.swift; sourceTree = "<group>"; };
 		6DDC0F161F9C7F9600098ED5 /* FPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPNavigationController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBF44101F9AFF7C00370EAF /* FPPaymentView.xib */,
+				6DD77E1B1F9CDE05006926AF /* FPConfirmTransactionView.xib */,
 				6DA5598D1F9BD30500DEF318 /* FPAmountConfirmationView.xib */,
 				6DA5598F1F9BD48700DEF318 /* FPHomeView.xib */,
 				6DA559931F9BD69F00DEF318 /* FPAccountView.xib */,
@@ -221,6 +226,7 @@
 				6DBF44131F9B009800370EAF /* FPPaymentViewController.swift */,
 				6DA559911F9BD55700DEF318 /* FPHomeViewController.swift */,
 				6DDC0F121F9C247000098ED5 /* FPPaymentConfirmViewController.swift */,
+				6DD77E1D1F9CDE1E006926AF /* FPConfirmTransactionController.swift */,
 				6DA559951F9BD70100DEF318 /* FPAccountViewController.swift */,
 			);
 			path = "Payment Interface";
@@ -368,6 +374,7 @@
 				6DBF43FD1F9AF64A00370EAF /* FPDisambiguationView.xib in Resources */,
 				6D00E0D21F9AEB4B002C8F7D /* LaunchScreen.storyboard in Resources */,
 				6DA559941F9BD69F00DEF318 /* FPAccountView.xib in Resources */,
+				6DD77E1C1F9CDE05006926AF /* FPConfirmTransactionView.xib in Resources */,
 				6DA559901F9BD48700DEF318 /* FPHomeView.xib in Resources */,
 				6DBF44041F9AF6C300370EAF /* FPSignInView.xib in Resources */,
 				6DA5598E1F9BD30500DEF318 /* FPAmountConfirmationView.xib in Resources */,
@@ -562,6 +569,7 @@
 				6DDC0F151F9C59B400098ED5 /* FPJSONModels.swift in Sources */,
 				6DBF44091F9AF70100370EAF /* FPSignUpController.swift in Sources */,
 				6D00E0C81F9AEB4B002C8F7D /* AppDelegate.swift in Sources */,
+				6DD77E1E1F9CDE1E006926AF /* FPConfirmTransactionController.swift in Sources */,
 				6DBF440B1F9AF70E00370EAF /* FPSignInController.swift in Sources */,
 				6DA5598A1F9BBFA900DEF318 /* FPSignUpPhotosController.swift in Sources */,
 				6DDC0F131F9C247000098ED5 /* FPPaymentConfirmViewController.swift in Sources */,
